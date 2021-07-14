@@ -6,20 +6,20 @@ const typeDefs = gql`
 
   type Query {
     message: String
-    products(id: ID): [Product]
+    products(id: Int): [Product]
   }
 
   type Product {
-    title: String!
-    author: [String]!
-    publisher: String!
-    jurisdiction: String!
-    publication_date: DateTime!
-    ibsn: String!
-    price: Float!
-    image: String!
-    text: String!
-    id: ID!
+    title: String
+    author: [String]
+    publisher: String
+    jurisdiction: String
+    publication_date: DateTime
+    ibsn: String
+    price: Float
+    image: String
+    text: String
+    id: Int
   }
 `;
 

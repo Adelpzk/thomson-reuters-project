@@ -17,68 +17,29 @@ const Query = {
 
   products: async (parent, args, context, info) => {
     const { id } = args;
+    console.log(id);
     //var response = null;
-    if (id) {
-      MongoClient.connect(mongo_url, function (err, db) {
-        if (err) throw err;
-        var dbo = db.db("TomsonReutersData");
-        var coll = dbo.collection("salesforceData");
+    if (id != null) {
+      const db = await MongoClient.connect(mongo_url);
+      const dbo = db.db("TomsonReutersData");
+      var coll = dbo.collection("salesforceData");
 
-        coll.find({ id: id }).toArray(function (err, result) {
-          if (err) throw err;
-          console.log(result);
-          response = result;
-          db.close();
-        });
-      });
-      //return response;
+      const result = await coll
+        .find({ id: id })
+        .toArray()
+        .then((res) => res);
+      return result;
     } else {
-      console.log("before call");
+      const db = await MongoClient.connect(mongo_url);
+      const dbo = db.db("TomsonReutersData");
+      var coll = dbo.collection("salesforceData");
 
-      init();
-
-      async function getProducts() {
-        const db = await MongoClient.connect(mongo_url);
-        const dbo = db.db("TomsonReutersData");
-        var coll = dbo.collection("salesforceData");
-        var returnResult;
-
-        const result = await coll.find().toArray(function (err, result) {
-          if (err) throw err;
-          //console.log(result);
-          returnResult = returnResult;
-          db.close();
-        });
-        return returnResult;
-      }
-      async function init() {
-        try {
-          var response = await getProducts();
-          console.log(response);
-        } catch (error) {
-          console.log(error);
-        }
-      }
-
-      /*
-      MongoClient.connect(mongo_url, function (err, db) {
-        if (err) throw err;
-        var dbo = db.db("TomsonReutersData");
-        var coll = dbo.collection("salesforceData");
-
-        coll.find().toArray(function (err, result) {
-          if (err) throw err;
-          console.log(result);w
-          response = result;
-          db.close();
-        });
-      });
-      */
-
-      console.log("After call");
-      return response;
+      const result = await coll
+        .find()
+        .toArray()
+        .then((res) => res);
+      return result;
     }
-    return response;
   },
 };
 
