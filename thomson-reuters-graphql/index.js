@@ -4,7 +4,6 @@ require("dotenv").config({ path: "../.env" });
 
 var url = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@salesforce-data.xg1r1.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 
-/*
 MongoClient.connect(url, function (err, db) {
   if (err) throw err;
   var dbo = db.db("TomsonReutersData");
@@ -16,4 +15,4 @@ MongoClient.connect(url, function (err, db) {
     db.close();
   });
 });
-*/
+
