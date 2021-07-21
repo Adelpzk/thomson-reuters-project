@@ -105,7 +105,7 @@ export default function Home() {
               Reuter Community
             </p>
             <Link href="/blogs">
-              <button>Blogs</button>
+              <button style={{ cursor: "pointer" }}>Blogs</button>
             </Link>
           </div>
           <div className="home-products">
@@ -115,7 +115,7 @@ export default function Home() {
               professionals rely on to deliver their best work.
             </p>
             <Link href="/products">
-              <button>Products</button>
+              <button style={{ cursor: "pointer" }}>Products</button>
             </Link>
           </div>
         </body>
