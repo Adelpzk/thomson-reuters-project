@@ -4,12 +4,35 @@ import Link from "next/link";
 export const getStaticProps = async () => {
   const GQL_API = 'http://localhost:3030';
   const GQL_QUERY = `
+    query($id: Int){
+      products(id: Int){
+        title
+        author
+        publisher
+        publication_date
+        image
+        text
+        id
+      }
+    }
   `
   const res = fetch(GQL_API, {
-    
-  })
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      query: GQL_QUERY,
+      variables,
+    }),
+  });
+  const data = res.json()
+
+  return{
+    props: { products: data }
+  }
 }
-export default function Products() {
+export default function Products({products}) {
   return (
     <>
       <Head>
