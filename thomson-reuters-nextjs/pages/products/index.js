@@ -15,6 +15,8 @@ export const getStaticProps = async () => {
         image
         text
         id
+        description
+        
       }
     }
   `
@@ -78,6 +80,7 @@ export default function Products({products}) {
                     <h4>{ product.publication_date}</h4>
                     <h4>{ product.publisher}</h4>
                     <h4>{ product.author}</h4>
+                    <h4>{product.description}</h4>
                     <br></br>
                   </a>
               </Link>

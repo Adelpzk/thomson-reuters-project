@@ -1,14 +1,12 @@
 var MongoClient = require("mongodb").MongoClient;
 const { query } = require("express");
-const { GraphQLDateTime } = require("graphql-scalars");
+
 const fetch = require("node-fetch");
 
 require("dotenv").config({ path: "../.env" });
 const mongo_url = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@salesforce-data.xg1r1.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 
-const DateTime = {
-  DateTime: GraphQLDateTime,
-};
+
 
 const Query = {
   message: (parent, args, context, info) => {
@@ -45,5 +43,5 @@ const Query = {
 
 module.exports = {
   Query,
-  DateTime,
+  
 };

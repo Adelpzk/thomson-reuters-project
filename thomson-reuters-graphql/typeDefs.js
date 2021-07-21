@@ -1,8 +1,8 @@
 const { gql } = require("apollo-server");
-const { GraphQLDateTime } = require("graphql-scalars");
+
 
 const typeDefs = gql`
-  scalar DateTime
+  
 
   type Query {
     message: String
@@ -14,12 +14,13 @@ const typeDefs = gql`
     author: [String]
     publisher: String
     jurisdiction: String
-    publication_date: DateTime
+    publication_date: String
     ibsn: String
     price: Float
     image: String
     text: String
     id: Int
+    description: String
   }
 `;
 

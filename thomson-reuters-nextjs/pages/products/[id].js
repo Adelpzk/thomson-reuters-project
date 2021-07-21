@@ -78,6 +78,7 @@ const Details = ({ product }) => {
             <h1>{ product.title }</h1>
             {parse(product.text)}
             <h1>Details Page</h1>
+            <p>{product.description}</p>
         </div>
     );
 }
