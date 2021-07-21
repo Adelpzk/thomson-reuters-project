@@ -78,13 +78,16 @@ export default function Blogs({ blogs }) {
             var d = new Date(blog.date);
             var options = { year: "numeric", month: "short", day: "numeric" };
             return (
-              <div key={blog.postId}>
+              <Link
+                href={"/blogs/" + blog.title.toLowerCase().replace(/\s+/g, "-")}
+                key={blog.postId}
+              >
                 <a>
                   <img src={blog.featuredImage.node.sourceUrl}></img>
                   <h3> {blog.title} </h3>
                   <p>{d.toLocaleDateString("en-US", options)}</p>
                 </a>
-              </div>
+              </Link>
             );
           })}
         </body>

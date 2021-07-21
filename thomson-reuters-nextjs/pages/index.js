@@ -83,7 +83,7 @@ export default function Home() {
       <main>
         <nav className="nav-bar">
           <img src="./tr_logo.png" className="app-logo" alt="TR logo" />
-          <h1 className="app-title"> Thomson Reuters GrpahQL POC NextJS App</h1>
+          <h1 className="app-title"> Thomson Reuters GraphQL POC NextJS App</h1>
           <ul className="nav-pages">
             <li>
               <Link href="/blogs">
