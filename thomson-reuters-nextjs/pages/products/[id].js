@@ -1,3 +1,5 @@
+import parse from 'html-react-parser';
+
 export const getStaticPaths = async () => {
     const GQL_API = 'http://localhost:3030';
   const GQL_QUERY = `
@@ -74,7 +76,7 @@ const Details = ({ product }) => {
     return (
         <div>
             <h1>{ product.title }</h1>
-            <p> { product.text }</p>
+            {parse(product.text)}
             <h1>Details Page</h1>
         </div>
     );
