@@ -1,4 +1,4 @@
-export const getStaticPaths = aysnc () => {
+export const getStaticPaths = async () => {
     const GQL_API = 'http://localhost:3030';
   const GQL_QUERY = `
     query($id: Int){
@@ -27,7 +27,7 @@ export const getStaticPaths = aysnc () => {
 
     const paths = data.map(product => {
         return {
-            parms: { id: product.id.toString() }
+            params: { id: product.id.toString() }
         }
     })
 

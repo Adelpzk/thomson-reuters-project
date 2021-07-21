@@ -16,23 +16,39 @@ export const getStaticProps = async () => {
       }
     }
   `
-  const res = fetch(GQL_API, {
+  const res = await fetch(GQL_API, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
       query: GQL_QUERY,
-      variables,
     }),
   });
-  const data = res.json()
+  const data = await res.json()
 
   return{
-    props: { products: data }
+    props: { data: data }
   }
 }
-export default function Products({products}) {
+
+const Products = ({ data }) => {
+  return (
+    <div>
+      <h1>All Products</h1>
+      {data.map(product => (
+        <div key={product.id}>
+          <a>
+            <h3>{ product.name }</h3>
+          </a>
+          </div>
+      ))}
+    </div>
+  );
+}
+
+
+/*export default function Products({products}) {
   return (
     <>
       <Head>
@@ -65,8 +81,13 @@ export default function Products({products}) {
               Explore the several books and products offered by Thomson Reuters.
             </p>
           </div>
+          <div> 
+
+    </div>
         </body>
       </main>
     </>
   );
-}
+} */
+
+export default Products;
