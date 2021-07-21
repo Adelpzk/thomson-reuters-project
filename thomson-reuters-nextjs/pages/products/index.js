@@ -27,17 +27,42 @@ export const getStaticProps = async () => {
       query: GQL_QUERY,
     }),
   });
+<<<<<<< HEAD
+=======
+  const data = await res.json()
+>>>>>>> 113a1452a1989e28a543d0d08a518b40bb2b499f
 
   const data = await res.json()
   
   return{
-    props: { products: data }
+    props: { data: data }
   }
 }
+<<<<<<< HEAD
 export default function Products({products}) {
   console.log('products below');
   console.log(products);
 
+=======
+
+const Products = ({ data }) => {
+  return (
+    <div>
+      <h1>All Products</h1>
+      {data.map(product => (
+        <div key={product.id}>
+          <a>
+            <h3>{ product.name }</h3>
+          </a>
+          </div>
+      ))}
+    </div>
+  );
+}
+
+
+/*export default function Products({products}) {
+>>>>>>> 113a1452a1989e28a543d0d08a518b40bb2b499f
   return (
     <>
       <Head>
@@ -70,6 +95,7 @@ export default function Products({products}) {
               Explore the several books and products offered by Thomson Reuters.
             </p>
           </div>
+<<<<<<< HEAD
           <div>
             <h1>All Products</h1>
             { products && products.data.products.map(product => (
@@ -80,8 +106,15 @@ export default function Products({products}) {
               </div>
             ))}
           </div>
+=======
+          <div> 
+
+    </div>
+>>>>>>> 113a1452a1989e28a543d0d08a518b40bb2b499f
         </body>
       </main>
     </>
   );
-}
+} */
+
+export default Products;
