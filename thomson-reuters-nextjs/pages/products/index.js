@@ -37,6 +37,8 @@ export const getStaticProps = async () => {
 }
 
 export default function Products({products}) {
+  var options = { year: "numeric", month: "short", day: "numeric" };
+  
   return (
     <>
       <Head>
@@ -72,17 +74,21 @@ export default function Products({products}) {
           
           <div>
             <h1>All Products</h1>
-            { products && products.map(product => (
+            { products && products.map(product => {
+              var d = new Date(product.publication_date)
+              return (
               <Link href={'/products/' + product.id}key={product.id}>
                 <a>
                     <h2>{ product.title }</h2>
                     <img src={product.image} alt="Product image" width="100" height="100"></img>
-                    <h4>{ product.publication_date + " | " + product.publisher + " | " + product.author}</h4>
+                    <h4>{ d.toLocaleDateString("en-US", options) + " | " + product.publisher + " | " + product.author}</h4>
                     <p>{product.description}</p>
                     <br></br>
                   </a>
-              </Link>
-            ))}
+              </Link>)
+            )
+            }
+            }}
           </div>
     
         </body>

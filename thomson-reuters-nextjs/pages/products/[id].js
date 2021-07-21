@@ -79,6 +79,8 @@ export const getStaticProps = async (context) => {
 }
 
 const Details = ({ product }) => {
+  var options = { year: "numeric", month: "short", day: "numeric" };
+  var d = new Date(product.publication_date)
   return (
       <div>
         <h1>Details Page</h1>
@@ -89,7 +91,7 @@ const Details = ({ product }) => {
           </div>
           <br></br>
           <div>
-          <h4>{ "Publication date: " + product.publication_date }</h4>
+          <h4>{ "Publication date: " + d.toLocaleDateString("en-US", options) }</h4>
           <h4>{ "IBSN: " + product.ibsn }</h4>
           <h4>{ "Price: $" + product.price }</h4>
           <h4>{ "Author: " + product.author }</h4>
