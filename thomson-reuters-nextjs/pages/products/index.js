@@ -85,18 +85,18 @@ export default function Products({products}) {
               Explore the several books and products offered by Thomson Reuters.
             </p>
           </div>
-          <div> 
+          
           <div>
             <h1>All Products</h1>
             { products && products.data.products.map(product => (
               <div key={product.id}>
-                <a>
+                <a href='/products/{product.id}'>
                     <h3>{ product.title }</h3>
                   </a>
               </div>
             ))}
           </div>
-    </div>
+    
         </body>
       </main>
     </>
