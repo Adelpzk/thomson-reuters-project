@@ -1,7 +1,10 @@
-import parse from 'html-react-parser';
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import parse from "html-react-parser";
 
 export const getStaticPaths = async () => {
-    const GQL_API = 'http://localhost:3030';
+  const GQL_API = "http://localhost:3030";
   const GQL_QUERY = `
     query{
       products{
@@ -17,33 +20,33 @@ export const getStaticPaths = async () => {
         ibsn
       }
     }
-  `
+  `;
   const res = await fetch(GQL_API, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      query: GQL_QUERY
+      query: GQL_QUERY,
     }),
   });
-  const data = await res.json()
-    console.log(data);
-    const paths = data.data.products.map(product => {
-        return {
-            params: { id: product.id.toString() }
-        }
-    })
-
+  const data = await res.json();
+  console.log(data);
+  const paths = data.data.products.map((product) => {
     return {
-        paths,
-        fallback: false
-    }
-}
+      params: { id: product.id.toString() },
+    };
+  });
+
+  return {
+    paths,
+    fallback: false,
+  };
+};
 
 export const getStaticProps = async (context) => {
   const id = context.params.id;
-  const GQL_API = 'http://localhost:3030';
+  const GQL_API = "http://localhost:3030";
   const GQL_QUERY = `
     query{
       products(id: ${id}){
@@ -59,28 +62,27 @@ export const getStaticProps = async (context) => {
         ibsn
       }
     }
-  `
- 
-   
-    const res = await fetch(GQL_API, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        query: GQL_QUERY
-      }),
-    });
-    const data = await res.json();
-    
-    return {
-        props: { product: data.data.products[0] }
-    }
-}
+  `;
+
+  const res = await fetch(GQL_API, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      query: GQL_QUERY,
+    }),
+  });
+  const data = await res.json();
+
+  return {
+    props: { product: data.data.products[0] },
+  };
+};
 
 const Details = ({ product }) => {
   var options = { year: "numeric", month: "short", day: "numeric" };
-  var d = new Date(product.publication_date)
+  var d = new Date(product.publication_date);
   return (
       <div>
           <h1>{ product.title }</h1>
@@ -97,8 +99,10 @@ const Details = ({ product }) => {
           <h4>{ "Publisher: " + product.publisher }</h4>
           <h4>{ "Jurisdiction: " + product.jurisdiction }</h4>
           </div>
-      </div>
+        </body>
+      </main>
+    </>
   );
-}
+};
 
 export default Details;

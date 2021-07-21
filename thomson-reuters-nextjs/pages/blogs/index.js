@@ -53,6 +53,11 @@ export default function Blogs({ blogs }) {
           <h1 className="app-title"> Thomson Reuters GrpahQL POC NextJS App</h1>
           <ul className="nav-pages">
             <li>
+              <Link href="/">
+                <a>Home</a>
+              </Link>
+            </li>
+            <li>
               <Link href="/blogs">
                 <a>Blogs</a>
               </Link>
