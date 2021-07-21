@@ -83,8 +83,7 @@ const Details = ({ product }) => {
   var d = new Date(product.publication_date)
   return (
       <div>
-        <h1>Details Page</h1>
-          <h2>{ product.title }</h2>
+          <h1>{ product.title }</h1>
           <img src={product.image} alt="Product image" width="200" height="200"></img>
           <div>
           {parse(product.text)}
