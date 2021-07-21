@@ -37,10 +37,11 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async (context) => {
+  const id = context.params.id;
   const GQL_API = 'http://localhost:3030';
   const GQL_QUERY = `
     query{
-      products{
+      products(id: ${id}){
         title
         author
         publisher
@@ -52,7 +53,7 @@ export const getStaticProps = async (context) => {
     }
   `
  
-    const id = context.params.id;
+   
     const res = await fetch(GQL_API, {
       method: "POST",
       headers: {
@@ -65,7 +66,7 @@ export const getStaticProps = async (context) => {
     const data = await res.json();
     
     return {
-        props: { product: data }
+        props: { product: data.data.products[0] }
     }
 }
 
