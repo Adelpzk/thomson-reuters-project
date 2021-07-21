@@ -31,7 +31,7 @@ export const getStaticProps = async () => {
 
   
   return{
-    props: { products: data }
+    props: { products: data.data.products }
   }
 }
 
@@ -88,12 +88,12 @@ export default function Products({products}) {
           
           <div>
             <h1>All Products</h1>
-            { products && products.data.products.map(product => (
-              <div key={product.id}>
-                <a href='/products/{product.id}'>
+            { products && products.map(product => (
+              <Link href={'/products/' + product.id}key={product.id}>
+                <a>
                     <h3>{ product.title }</h3>
                   </a>
-              </div>
+              </Link>
             ))}
           </div>
     
