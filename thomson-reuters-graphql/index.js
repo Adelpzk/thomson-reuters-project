@@ -18,7 +18,7 @@ MongoClient.connect(mongo_url, function (err, db) {
   var dbo = db.db("TomsonReutersData");
   var coll = dbo.collection("salesforceData");
 
-  coll.find({ id: 1 }).toArray(function (err, result) {
+  coll.find({ id: 2 }).toArray(function (err, result) {
     if (err) throw err;
     console.log(result);
     db.close();
