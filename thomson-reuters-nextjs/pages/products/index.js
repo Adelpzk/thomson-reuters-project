@@ -78,9 +78,7 @@ export default function Products({products}) {
                 <a>
                     <h2>{ product.title }</h2>
                     <img src={product.image} alt="Product image" width="100" height="100"></img>
-                    <h4>{ product.publication_date}</h4>
-                    <h4>{ product.publisher}</h4>
-                    <h4>{ product.author}</h4>
+                    <h4>{ product.publication_date + " | " + product.publisher + " | " + product.author}</h4>
                     <h4>{product.description}</h4>
                     <br></br>
                   </a>
