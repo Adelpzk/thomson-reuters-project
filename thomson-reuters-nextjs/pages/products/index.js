@@ -86,9 +86,10 @@ export default function Products({products}) {
                     <br></br>
                   </a>
               </Link>)
-            )
             }
-            }}
+            )
+            
+            }
           </div>
     
         </body>
