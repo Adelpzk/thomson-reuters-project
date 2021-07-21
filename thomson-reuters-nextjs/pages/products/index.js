@@ -35,23 +35,6 @@ export const getStaticProps = async () => {
   }
 }
 
-/*const Products = ({ data }) => {
-  return (
-    <div>
-      <h1>All Products</h1>
-      {data.map(product => (
-        <div key={product.id}>
-          <a>
-            <h3>{ product.name }</h3>
-          </a>
-          </div>
-      ))}
-    </div>
-  );
-}
-*/
-
-
 export default function Products({products}) {
   return (
     <>
@@ -91,7 +74,11 @@ export default function Products({products}) {
             { products && products.map(product => (
               <Link href={'/products/' + product.id}key={product.id}>
                 <a>
-                    <h3>{ product.title }</h3>
+                    <h2>{ product.title }</h2>
+                    <h4>{ product.publication_date}</h4>
+                    <h4>{ product.publisher}</h4>
+                    <h4>{ product.author}</h4>
+                    <br></br>
                   </a>
               </Link>
             ))}
