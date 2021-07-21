@@ -1,8 +1,8 @@
-export const getStaticPaths = aysnc () => {
+export const getStaticPaths = async () => {
     const GQL_API = 'http://localhost:3030';
   const GQL_QUERY = `
-    query($id: Int){
-      products(id: Int){
+    query{
+      products{
         title
         author
         publisher
@@ -19,12 +19,11 @@ export const getStaticPaths = aysnc () => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      query: GQL_QUERY,
-      variables,
+      query: GQL_QUERY
     }),
   });
   const data = await res.json()
-
+    console.log(data);
     const paths = data.map(product => {
         return {
             parms: { id: product.id.toString() }

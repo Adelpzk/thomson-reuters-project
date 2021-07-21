@@ -1,11 +1,13 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import image from "next/image"
+import { Profiler } from "react";
 export const getStaticProps = async () => {
   const GQL_API = 'http://localhost:3030';
   const GQL_QUERY = `
-    query($id: Int){
-      products(id: Int){
+    query{
+      products{
         title
         author
         publisher
@@ -16,23 +18,26 @@ export const getStaticProps = async () => {
       }
     }
   `
-  const res = fetch(GQL_API, {
+  const res = await fetch(GQL_API, {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
+     headers: {
+       "Content-Type": "application/json",
+     },
     body: JSON.stringify({
       query: GQL_QUERY,
-      variables,
     }),
   });
-  const data = res.json()
 
+  const data = await res.json()
+  
   return{
     props: { products: data }
   }
 }
 export default function Products({products}) {
+  console.log('products below');
+  console.log(products);
+
   return (
     <>
       <Head>
@@ -64,6 +69,16 @@ export default function Products({products}) {
             <p>
               Explore the several books and products offered by Thomson Reuters.
             </p>
+          </div>
+          <div>
+            <h1>All Products</h1>
+            { products && products.data.products.map(product => (
+              <div key={product.id}>
+                <a>
+                    <h3>{ product.title }</h3>
+                  </a>
+              </div>
+            ))}
           </div>
         </body>
       </main>
