@@ -1,7 +1,14 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-
+export const getStaticProps = async () => {
+  const GQL_API = 'http://localhost:3030';
+  const GQL_QUERY = `
+  `
+  const res = fetch(GQL_API, {
+    
+  })
+}
 export default function Products() {
   return (
     <>
