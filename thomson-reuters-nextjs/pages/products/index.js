@@ -75,6 +75,7 @@ export default function Products({products}) {
               <Link href={'/products/' + product.id}key={product.id}>
                 <a>
                     <h2>{ product.title }</h2>
+                    <img src={product.image} alt="Product image" width="100" height="100"></img>
                     <h4>{ product.publication_date}</h4>
                     <h4>{ product.publisher}</h4>
                     <h4>{ product.author}</h4>

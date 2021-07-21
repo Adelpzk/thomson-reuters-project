@@ -75,9 +75,13 @@ export const getStaticProps = async (context) => {
 const Details = ({ product }) => {
     return (
         <div>
+          <h1>Details Page</h1>
             <h1>{ product.title }</h1>
+            <img src={product.image} alt="Product image" width="200" height="200"></img>
+            <div>
             {parse(product.text)}
-            <h1>Details Page</h1>
+            </div>
+            
         </div>
     );
 }
