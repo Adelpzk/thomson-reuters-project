@@ -5,9 +5,42 @@ import Link from "next/link";
 
 export const getStaticProps = async () => {
 
+  const GQL_API = `http://frp.vlb.mybluehost.me/graphql`
+  const GQL_QUERY =`
+    query{
+      posts{
+        nodes {
+          postId
+          title
+          date
+          featuredImage {
+            node {
+              sourceUrl
+            }
+          }
+        }
+      }
+    }
+    `
+    const res = await     fetch(GQL_API, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        query: GQL_QUERY
+      }),
+    });
+
+const result = await res.json();
+console.log(result.data.posts.nodes)
+
+return {
+  props: {blogs: result.data.posts.nodes}
+}
   
 }
-export default function Blogs() {
+export default function Blogs({blogs}) {
   return (
     <>
       <Head>
@@ -44,6 +77,14 @@ export default function Blogs() {
               and challenges facing their world today.
             </p>
           </div>
+          {blogs.map(blog => (
+            <div key={blog.postId}>
+              <a>
+                <img src = {blog.featuredImage.node.sourceUrl}></img>
+                <h3> {blog.title} </h3>
+              </a>
+            </div>
+          ))} 
         </body>
       </main>
     </>
