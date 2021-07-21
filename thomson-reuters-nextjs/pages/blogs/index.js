@@ -38,6 +38,7 @@ export const getStaticProps = async () => {
   };
 };
 export default function Blogs({ blogs }) {
+  var options = { year: "numeric", month: "short", day: "numeric" };
   return (
     <>
       <Head>
@@ -76,7 +77,6 @@ export default function Blogs({ blogs }) {
           </div>
           {blogs.map((blog) => {
             var d = new Date(blog.date);
-            var options = { year: "numeric", month: "short", day: "numeric" };
             return (
               <Link
                 href={"/blogs/" + blog.title.toLowerCase().replace(/\s+/g, "-")}
