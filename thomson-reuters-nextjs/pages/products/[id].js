@@ -12,6 +12,9 @@ export const getStaticPaths = async () => {
         image
         text
         id
+        price
+        jurisdiction
+        ibsn
       }
     }
   `
@@ -51,6 +54,9 @@ export const getStaticProps = async (context) => {
         image
         text
         id
+        price
+        jurisdiction
+        ibsn
       }
     }
   `
@@ -73,17 +79,25 @@ export const getStaticProps = async (context) => {
 }
 
 const Details = ({ product }) => {
-    return (
-        <div>
-          <h1>Details Page</h1>
-            <h1>{ product.title }</h1>
-            <img src={product.image} alt="Product image" width="200" height="200"></img>
-            <div>
-            {parse(product.text)}
-            </div>
-            
-        </div>
-    );
+  return (
+      <div>
+        <h1>Details Page</h1>
+          <h2>{ product.title }</h2>
+          <img src={product.image} alt="Product image" width="200" height="200"></img>
+          <div>
+          {parse(product.text)}
+          </div>
+          <br></br>
+          <div>
+          <h4>{ "Publication date: " + product.publication_date }</h4>
+          <h4>{ "IBSN: " + product.ibsn }</h4>
+          <h4>{ "Price: $" + product.price }</h4>
+          <h4>{ "Author: " + product.author }</h4>
+          <h4>{ "Publisher: " + product.publisher }</h4>
+          <h4>{ "Jurisdiction: " + product.jurisdiction }</h4>
+          </div>
+      </div>
+  );
 }
 
 export default Details;
