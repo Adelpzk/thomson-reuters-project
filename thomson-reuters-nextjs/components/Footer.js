@@ -6,18 +6,21 @@ export default function Footer() {
       <br />
       <br />
       <footer>
-        <div class="tr-GlobalFooter-inner">
-          <div class="tr-GlobalFooter-top">
+        <div className="tr-GlobalFooter-inner">
+          <div className="tr-GlobalFooter-top">
             <Image
-              class="tr-GlobalFooter-logoInner"
+              className="tr-GlobalFooter-logoInner"
               src="/tr_logo.png"
               height={50}
               width={213}
             />
           </div>
-          <ul class="tr-GlobalFooter-items" data-rehydratable-children="true">
-            <ul class="tr-GlobalFooter-items">
-              <li class="tr-GlobalFooterItem">
+          <ul
+            className="tr-GlobalFooter-items"
+            data-rehydratable-children="true"
+          >
+            <ul className="tr-GlobalFooter-items">
+              <li className="tr-GlobalFooterItem">
                 <a
                   href="https://www.thomsonreuters.com/en/privacy-statement.html#cookies"
                   target="_blank"
@@ -25,7 +28,7 @@ export default function Footer() {
                   Cookie Policy
                 </a>
               </li>
-              <li class="tr-GlobalFooterItem">
+              <li className="tr-GlobalFooterItem">
                 <a
                   href="https://www.thomsonreuters.com/en/privacy-statement.html"
                   target="_blank"
@@ -34,7 +37,7 @@ export default function Footer() {
                 </a>
               </li>
 
-              <li class="tr-GlobalFooterItem">
+              <li className="tr-GlobalFooterItem">
                 <a
                   href="https://www.thomsonreuters.ca/en/terms-of-use.html"
                   target="_blank"
@@ -43,7 +46,7 @@ export default function Footer() {
                 </a>
               </li>
 
-              <li class="tr-GlobalFooterItem">
+              <li className="tr-GlobalFooterItem">
                 <a
                   href="https://www.thomsonreuters.ca/en/copyright.html"
                   target="_blank"
@@ -52,7 +55,7 @@ export default function Footer() {
                 </a>
               </li>
 
-              <li class="tr-GlobalFooterItem">
+              <li className="tr-GlobalFooterItem">
                 <a
                   href="https://www.thomsonreuters.com/en/careers.html"
                   target="_blank"
