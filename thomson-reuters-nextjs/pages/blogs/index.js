@@ -42,7 +42,7 @@ export default function Blogs({ blogs }) {
   return (
     <>
       <div className="blogs">
-        <h2>Thomson Reuter Institute Blogs</h2>
+        <h1>Thomson Reuter Institute Blogs</h1>
         <p>
           The Thomson Reuters Institute brings together people from across the
           legal, corporate, tax & accounting, and government communities to

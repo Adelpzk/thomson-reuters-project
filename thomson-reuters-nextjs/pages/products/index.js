@@ -41,14 +41,14 @@ export default function Products({ products }) {
   return (
     <>
       <div className="products">
-        <h2>Thomson Reuter Books and Products</h2>
+        <h1>Thomson Reuter Books and Products</h1>
         <p>
           Explore the several books and products offered by Thomson Reuters.
         </p>
       </div>
 
       <div>
-        <h1>All Products</h1>
+        <h2>All Products</h2>
         {products &&
           products.map((product) => {
             var d = new Date(product.publication_date);
