@@ -8,16 +8,7 @@ export const getStaticPaths = async () => {
   const GQL_QUERY = `
     query{
       products{
-        title
-        author
-        publisher
-        publication_date
-        image
-        text
         id
-        price
-        jurisdiction
-        ibsn
       }
     }
   `;
