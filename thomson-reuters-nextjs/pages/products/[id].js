@@ -31,7 +31,7 @@ export const getStaticPaths = async () => {
     }),
   });
   const data = await res.json();
-  console.log(data);
+  //console.log(data);
   const paths = data.data.products.map((product) => {
     return {
       params: { id: product.id.toString() },
@@ -83,7 +83,9 @@ export const getStaticProps = async (context) => {
 const Details = ({ product }) => {
   var options = { year: "numeric", month: "short", day: "numeric" };
   var d = new Date(product.publication_date);
+
   return (
+<<<<<<< HEAD
       <div>
           <h1>{ product.title }</h1>
           <img src={product.image} alt="Product image" width="200" height="200"></img>
@@ -101,6 +103,37 @@ const Details = ({ product }) => {
           </div>
         </body>
       </main>
+=======
+    <>
+      <div className="product">
+        <h1>Details Page</h1>
+        <h2>{product.title}</h2>
+        <img
+          src={product.image}
+          alt="Product image"
+          width="200"
+          height="200"
+        ></img>
+        <div>{parse(product.text)}</div>
+        <br />
+        <div>
+          <p className="publish-date">
+            {"Publication date: " + d.toLocaleDateString("en-US", options)}
+          </p>
+          {product.ibsn != null ? (
+            <p className="ibsn">{"IBSN: " + product.ibsn}</p>
+          ) : (
+            <></>
+          )}
+          <p className="price">{"Price: $" + product.price}</p>
+          <p className="author">{"Author: " + product.author.join(", ")}</p>
+          <p className="publisher">{"Publisher: " + product.publisher}</p>
+          <p className="juresdiction">
+            {"Jurisdiction: " + product.jurisdiction}
+          </p>
+        </div>
+      </div>
+>>>>>>> 7b17f3b439e101762452693aa9d165ca719738c1
     </>
   );
 };
