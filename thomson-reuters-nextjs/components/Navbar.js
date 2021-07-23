@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <div className="tr-SiteHeader tr-SiteHeader--withSiteName">
       <nav className="nav-bar tr-SiteHeader-inner">
-        <div className="tr-SiteHeader-logo">
+        <div className="nav-logo tr-SiteHeader-logo">
           <Image
             src="/tr_logo.png"
             className="app-logo"
@@ -13,8 +13,8 @@ export default function Navbar() {
             width={235}
           />
         </div>
-        <div>
-          <ul className="nav-pages tr-SiteHeader-menus">
+        <div className="nav-pages">
+          <ul className="tr-SiteHeader-menus">
             <li className="tr-SiteHeaderMenu">
               <Link href="/">
                 <a className="tr-SiteHeaderMenu-link">Home</a>

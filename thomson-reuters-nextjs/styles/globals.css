@@ -3,15 +3,20 @@ html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   height: 100%;
-  min-height: 100%;
+  position: relative;
 }
 body {
+  position: relative;
+  color: #404040;
+  font-family: Knowledge2017, Helvetica Neue, Arial, sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
   margin: 0;
+  height: 100%;
 }
 main {
   display: block;
-  height: 100%;
-  min-height: 100%;
 }
 h1 {
   font-size: 2em;
@@ -283,13 +288,6 @@ ul {
 }
 [type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
-}
-body {
-  color: #404040;
-  font-family: Knowledge2017, Helvetica Neue, Arial, sans-serif;
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.5;
 }
 b,
 strong {
@@ -2059,7 +2057,7 @@ body.is-scrollLocked {
 }
 .tr-Heading--l,
 .tr-Heading--m {
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.28571;
 }
 .tr-Heading--l,
@@ -5246,13 +5244,11 @@ body.is-scrollLocked {
   height: 63px;
   height: 3.9375rem;
   overflow: hidden;
-  width: 80%;
   margin: 0 auto;
 }
 @media (min-width: 48em) {
   .tr-GlobalFooter {
     height: auto;
-    width: 80%;
     /*justify-content: center;*/
     overflow: auto;
     margin: 0 auto;
@@ -5267,7 +5263,8 @@ body.is-scrollLocked {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 75rem;
+    width: 85%;
+    margin: 0 auto;
   }
 }
 @media (max-width: 1026px) {
@@ -8481,7 +8478,7 @@ body.is-scrollLocked {
   align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  /*display: flex;*/
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
@@ -8497,7 +8494,7 @@ body.is-scrollLocked {
 }
 @supports (display: grid) {
   .tr-SiteHeader-inner {
-    display: grid;
+    /*display: grid;*/
     grid-template-columns: repeat(2, minmax(-webkit-min-content, auto)) 1fr minmax(
         -webkit-min-content,
         auto
@@ -9160,6 +9157,7 @@ body.is-scrollLocked {
   -ms-flex-negative: 0;
   flex-shrink: 0;
   overflow: hidden;
+  padding: 0 10px;
 }
 @media (min-width: 75em) {
   .tr-SiteHeaderMenu {
@@ -12532,11 +12530,27 @@ body.is-scrollLocked {
   background-color: #262626;
 }
 
-.tr-SemanticFooter {
+footer {
   position: relative;
-  bottom: 0px;
 }
-.body {
+
+#__next {
   min-height: 100%;
-  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+}
+
+.nav-pages {
+  position: relative;
+  float: right;
+}
+
+.nav-logo {
+  position: relative;
+  float: left;
+}
+
+.nav-bar {
+  position: relative;
 }
