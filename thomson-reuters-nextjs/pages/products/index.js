@@ -53,26 +53,29 @@ export default function Products({ products }) {
           products.map((product) => {
             var d = new Date(product.publication_date);
             return (
-              <Link href={"/products/" + product.id} key={product.id}>
-                <a>
-                  <h2>{product.title}</h2>
-                  <img
-                    src={product.image}
-                    alt="Product image"
-                    width="100"
-                    height="100"
-                  ></img>
-                  <h4>
-                    {d.toLocaleDateString("en-US", options) +
-                      " | " +
-                      product.publisher +
-                      " | " +
-                      product.author}
-                  </h4>
-                  <p>{product.description}</p>
-                  <br></br>
-                </a>
-              </Link>
+              <div className="list-product" id={product.id}>
+                <Link href={"/products/" + product.id} key={product.id}>
+                  <a>
+                    <h3>{product.title}</h3>
+                  </a>
+                </Link>
+                <img
+                  src={product.image}
+                  alt="Product image"
+                  width="100"
+                  height="100"
+                />
+
+                <p>
+                  {d.toLocaleDateString("en-US", options) +
+                    " | " +
+                    product.publisher +
+                    " | " +
+                    product.author}
+                </p>
+                <p>{product.description}</p>
+                <br />
+              </div>
             );
           })}
       </div>
