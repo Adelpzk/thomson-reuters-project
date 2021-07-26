@@ -3808,6 +3808,7 @@ a.article-hero__tag:hover {
 .article-share-links li {
   margin: 0;
   padding: 0;
+  display: block;
 }
 .article-share-links:after,
 .article-share-links:before {
