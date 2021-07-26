@@ -40,12 +40,68 @@ export default function Products({ products }) {
 
   return (
     <>
-      <div className="products">
-        <h1>Thomson Reuter Books and Products</h1>
+      {/* <div className="products"> */}
+      
+        {/* <div className="hero-block"> */}
+          <div className= "tr-Section tr-Section--grayDark">
+          <div className="tr-Poster tr-Poster--s">
+          <div className="tr-Poster-image">
+            <div
+              className="tr-Image tr-Image--cover tr-Image--anchorC "
+              style={{
+                "background-image":
+                  "url(https://www.thomsonreuters.com/content/dam/ewp-m/images/image-library/en/photography/21760721744-6a4e1b628d-o.jpg.transform/hero-s/q90/image.jpg)",
+              }}
+            >
+              <img
+                class="tr-Image-img"
+                alt=""
+                src="https://www.thomsonreuters.com/content/dam/ewp-m/images/image-library/en/photography/21760721744-6a4e1b628d-o.jpg.transform/hero-s/q90/image.jpg"
+                srcset="https://www.thomsonreuters.com/content/dam/ewp-m/images/image-library/en/photography/21760721744-6a4e1b628d-o.jpg.transform/hero-s/q90/image.jpg 1440w, https://www.thomsonreuters.com/content/dam/ewp-m/images/image-library/en/photography/21760721744-6a4e1b628d-o.jpg.transform/hero-s/q90/image.jpg 375w"
+                loading="lazy"
+              />
+            </div>
+          </div>
+            <div className="tr-Poster-content">
+                <div className="tr-Poster-contentInner">
+                    <div className="tr-Grid tr-Grid--712512 tr-Grid--gutterlessAtNarrow">
+                        <div className="tr-Grid-items">
+                            <div className="tr-Grid-item">
+                                <div className="tr-VerticalSpacing tr-VerticalSpacing--xs">
+                                    <p className="tr-Eyebrow u-typographySmallCaps">Explore our products</p>
+                                </div>
+    <div className="tr-VerticalSpacing tr-VerticalSpacing--m">
+        <h1 className="tr-Heading tr-Heading--xl">
+        Thomson Reuter Books and Products
+        <br></br>
+    </h1>
+    </div>
+    <div className="tr-VerticalSpacing tr-VerticalSpacing--l">
+        <div className="tr-RichText tr-RichText--compact">
+          Explore the several books and products offered by Thomson Reuters.
+        </div>
+      </div>
+      <div className="tr-VerticalSpacing tr-VerticalSpacing--m">
+        <div className="tr-Group">
+            <div className="tr-Group-inner"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>    
+</div>
+</div>
+</div>
+{/* </div> */}
+
+
+
+        {/* <h1>Thomson Reuter Books and Products</h1>
         <p>
           Explore the several books and products offered by Thomson Reuters.
         </p>
-      </div>
+      </div> */}
 
       <div>
         <h2>All Products</h2>

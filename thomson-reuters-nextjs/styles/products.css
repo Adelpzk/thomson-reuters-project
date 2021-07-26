@@ -1,0 +1,176 @@
+.tr-Poster-image {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  *,
+  :after,
+  :before {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+  }
+
+  .tr-Section--grayDark {
+    background-color: #404040;
+    color: #f4f4f4;
+  }
+
+  .tr-Poster {
+    position: relative;
+  }
+
+  .tr-Image {
+    height: 100%;
+    width: 100%;
+  }
+  .tr-Image-img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
+  .tr-Image--cover {
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    overflow: hidden;
+  }
+  .tr-Image--cover .tr-Image-img {
+    height: 100%;
+    visibility: hidden;
+    width: 100%;
+  }
+  .tr-Image--anchorN {
+    background-position: 50% 0;
+  }
+  .tr-Image--anchorNE {
+    background-position: 100% 0;
+  }
+  .tr-Image--anchorE {
+    background-position: 100% 50%;
+  }
+  .tr-Image--anchorSE {
+    background-position: 100% 100%;
+  }
+  .tr-Image--anchorS {
+    background-position: 50% 100%;
+  }
+  .tr-Image--anchorSW {
+    background-position: 0 100%;
+  }
+  .tr-Image--anchorW {
+    background-position: 0 50%;
+  }
+  .tr-Image--anchorNW {
+    background-position: 0 0;
+  }
+  .tr-Image--anchorC {
+    background-position: 50% 50%;
+  }
+  .tr-Image--overlay {
+    position: relative;
+  }
+  .tr-Image--overlay:after {
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .tr-Image--scrimBottomDark:after {
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0)),
+      color-stop(0.8%, rgba(0, 0, 0, 0.002)),
+      color-stop(4.8%, rgba(0, 0, 0, 0.008)),
+      color-stop(9%, rgba(0, 0, 0, 0.021)),
+      color-stop(13.9%, rgba(0, 0, 0, 0.042)),
+      color-stop(19.8%, rgba(0, 0, 0, 0.075)),
+      color-stop(27%, rgba(0, 0, 0, 0.126)),
+      color-stop(35%, rgba(0, 0, 0, 0.194)),
+      color-stop(43.5%, rgba(0, 0, 0, 0.278)),
+      color-stop(53%, rgba(0, 0, 0, 0.382)),
+      color-stop(66%, rgba(0, 0, 0, 0.541)),
+      color-stop(81%, rgba(0, 0, 0, 0.738)),
+      to(#000)
+    );
+    background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0,
+      rgba(0, 0, 0, 0.002) 0.8%,
+      rgba(0, 0, 0, 0.008) 4.8%,
+      rgba(0, 0, 0, 0.021) 9%,
+      rgba(0, 0, 0, 0.042) 13.9%,
+      rgba(0, 0, 0, 0.075) 19.8%,
+      rgba(0, 0, 0, 0.126) 27%,
+      rgba(0, 0, 0, 0.194) 35%,
+      rgba(0, 0, 0, 0.278) 43.5%,
+      rgba(0, 0, 0, 0.382) 53%,
+      rgba(0, 0, 0, 0.541) 66%,
+      rgba(0, 0, 0, 0.738) 81%,
+      #000
+    );
+  }
+  @supports ((-o-object-fit: cover) or (object-fit: cover)) and
+    ((-o-object-position: 50% 50%) or (object-position: 50% 50%)) {
+    .tr-Image--cover {
+      background-image: none !important;
+    }
+    .tr-Image--cover .tr-Image-img {
+      -o-object-fit: cover;
+      object-fit: cover;
+      visibility: visible;
+    }
+    .tr-Image--anchorN .tr-Image-img {
+      -o-object-position: 50% 0;
+      object-position: 50% 0;
+    }
+    .tr-Image--anchorNE .tr-Image-img {
+      -o-object-position: 100% 0;
+      object-position: 100% 0;
+    }
+    .tr-Image--anchorE .tr-Image-img {
+      -o-object-position: 100% 50%;
+      object-position: 100% 50%;
+    }
+    .tr-Image--anchorSE .tr-Image-img {
+      -o-object-position: 100% 100%;
+      object-position: 100% 100%;
+    }
+    .tr-Image--anchorS .tr-Image-img {
+      -o-object-position: 50% 100%;
+      object-position: 50% 100%;
+    }
+    .tr-Image--anchorSW .tr-Image-img {
+      -o-object-position: 0 100%;
+      object-position: 0 100%;
+    }
+    .tr-Image--anchorW .tr-Image-img {
+      -o-object-position: 0 50%;
+      object-position: 0 50%;
+    }
+    .tr-Image--anchorNW .tr-Image-img {
+      -o-object-position: 0 0;
+      object-position: 0 0;
+    }
+    .tr-Image--anchorC .tr-Image-img {
+      -o-object-position: 50% 50%;
+      object-position: 50% 50%;
+    }
+  }
+  @media (-ms-high-contrast: none) {
+    .tr-Image--cover {
+      background-image: none !important;
+    }
+    .tr-Image--cover .tr-Image-img {
+      -o-object-fit: cover;
+      object-fit: cover;
+      visibility: visible;
+    }
+  }
+  
