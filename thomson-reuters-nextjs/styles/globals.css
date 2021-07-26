@@ -12554,3 +12554,59 @@ footer {
 .nav-bar {
   position: relative;
 }
+
+.poster-section {
+  height: 552px;
+}
+
+.tr-PairedCard {
+  border: 0.08rem solid #d0d0d0;
+}
+
+.tr-PairedCard:hover {
+  -webkit-box-shadow: 0 0.125rem 0.5rem #afafaf;
+  box-shadow: 0 0.125rem 0.5rem #afafaf;
+  color: inherit;
+}
+
+.card-image {
+  display: inline-block;
+  width: 50%;
+}
+.card-content {
+  display: inline-block;
+  width: 50%;
+}
+
+.tr-CardBase-inner {
+  flex-direction: row-reverse;
+}
+.tr-PairedCard-content {
+  flex-direction: row-reverse;
+}
+.tr-PairedCard-content-product {
+  flex-direction: row;
+}
+
+.tr-PairedCard-contentInner {
+  border: none;
+}
+
+.tr-PairedCard-image {
+  height: 18rem;
+  width: 50%;
+}
+
+.tr-TextCardBase-content {
+  justify-content: center;
+}
+
+.link-button {
+  font-size: 16px;
+  padding: 2px 10px;
+  margin-top: 10px;
+}
+
+.tr-PairedCard {
+  background-color: white;
+}

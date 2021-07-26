@@ -2,8 +2,6 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <>
-      <br />
-      <br />
       <footer className="tr-SemanticFooter">
         <div class="site-specific-footer">
           <div data-react-from-markup-container="true">
