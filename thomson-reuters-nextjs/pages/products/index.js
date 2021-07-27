@@ -103,7 +103,14 @@ export default function Products({ products }) {
         </p>
       </div> */}
 
-      <div>
+      <div className = "tr-Grid-item">
+        <div 
+          ClassName = "tr-SearchResults"
+          style = {{"padding-right": "20px"}}
+        >
+        <div ClassName = "tr-ProductInfo-heading"></div>
+        <div ClassName = "tr-SearchResults-results">
+          
         <h2>All Products</h2>
         {products &&
           products.map((product) => {
@@ -135,7 +142,9 @@ export default function Products({ products }) {
               </div>
             );
           })}
-      </div>
+          </div>
+        </div>
+        </div> 
     </>
   );
 }
