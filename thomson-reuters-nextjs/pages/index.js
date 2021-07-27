@@ -139,7 +139,7 @@ export default function Home() {
                           <p>
                             Stay up-to-date with the latest developments from
                             the Thomson Reuter Community
-                          </p>
+                          </p>   
                           <Link href="/blogs">
                             <a class="link-button tr-Anchor tr-Button tr-Button--primary ">
                               <span class="tr-Button-body">Blogs</span>
