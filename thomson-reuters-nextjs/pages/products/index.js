@@ -109,19 +109,20 @@ export default function Products({ products }) {
           products.map((product) => {
             var d = new Date(product.publication_date);
             return (
+              
               <div className="list-product" id={product.id}>
-                <Link href={"/products/" + product.id} key={product.id}>
-                  <a>
-                    <h3>{product.title}</h3>
-                  </a>
-                </Link>
-                <img
+                
+                <img className ="tr-ProductInfoImage-img"
                   src={product.image}
                   alt="Product image"
-                  width="100"
-                  height="100"
+                  // width="100"
+                  // height="100"
                 />
-
+                <Link href={"/products/" + product.id} key={product.id}>
+                  <a>
+                    <h2 className = "tr-Heading tr-Heading--s"><strong>{product.title}</strong></h2>
+                  </a>
+                </Link>
                 <p>
                   {d.toLocaleDateString("en-US", options) +
                     " | " +
