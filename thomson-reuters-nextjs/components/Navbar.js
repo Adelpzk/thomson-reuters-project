@@ -3,33 +3,40 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <nav className="nav-bar">
-      <div>
-        <Image
-          src="/tr_logo.png"
-          className="app-logo"
-          height={100}
-          width={427}
-        />
-        <h1 className="app-title">Thomson Reuters GraphQL POC NextJS App</h1>
-        <ul className="nav-pages">
-          <li>
-            <Link href="/">
-              <a>Home</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/blogs">
-              <a>Blogs</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/products">
-              <a>Products</a>
-            </Link>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <div className="tr-SiteHeader tr-SiteHeader--withSiteName">
+      <nav className="nav-bar tr-SiteHeader-inner">
+        <a style={{ cursor: "pointer" }}>
+          <Link href="/">
+            <div className="nav-logo tr-SiteHeader-logo">
+              <Image
+                src="/tr_logo.png"
+                className="app-logo"
+                height={55}
+                width={235}
+              />
+            </div>
+          </Link>
+        </a>
+        <div className="nav-pages">
+          <ul className="tr-SiteHeader-menus">
+            {/* <li className="tr-SiteHeaderMenu">
+              <Link href="/">
+                <a className="tr-SiteHeaderMenu-link">Home</a>
+              </Link>
+            </li> */}
+            <li className="tr-SiteHeaderMenu">
+              <Link href="/blogs">
+                <a className="tr-SiteHeaderMenu-link">Blogs</a>
+              </Link>
+            </li>
+            <li className="tr-SiteHeaderMenu">
+              <Link href="/products">
+                <a className="tr-SiteHeaderMenu-link">Products</a>
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   );
 }
