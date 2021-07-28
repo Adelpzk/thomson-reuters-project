@@ -176,7 +176,9 @@ export default function Blogs({ blogs }) {
                     <a
                       href={
                         "/blogs/" +
-                        blog.title.toLowerCase().replace(/\s+/g, "-")
+                        encodeURIComponent(
+                          blog.title.toLowerCase().replace(/\s+/g, "-")
+                        )
                       }
                       title=""
                     >
@@ -202,7 +204,9 @@ export default function Blogs({ blogs }) {
                       <Link
                         href={
                           "/blogs/" +
-                          blog.title.toLowerCase().replace(/\s+/g, "-")
+                          encodeURIComponent(
+                            blog.title.toLowerCase().replace(/\s+/g, "-")
+                          )
                         }
                         key={blog.postId}
                       >
