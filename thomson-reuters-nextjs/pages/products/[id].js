@@ -72,65 +72,96 @@ export const getStaticProps = async (context) => {
 };
 
 const Details = ({ product }) => {
-  var options = { year: "numeric", month: "short", day: "numeric" };
+  var options = { year: "numeric", month: "numeric", day: "numeric" };
   var d = new Date(product.publication_date);
 
   return (
     <>
       <div className="product">
-        <div className ="tr-Section">
-          <div className = "tr-Section-inner">
-            
-            <div className = "tr-FlexGrid-containerFluid tr-ProductDetailSummary-innerCard">
-            <h1>Details Page</h1>
-                <div id="contentWrapper" className = "tr-FlexFrid-row">
-                <div id="contentDesktop" className="tr-FlexGrid-hidden-xs tr-FlexGrid-hidden-sm tr-FlexGrid-col-md-12 tr-FlexGrid-col-lg-12"> 
-                <div className="tr-FlexGrid-row">
-                <div className="tr-FlexGrid-col-xs-12 tr-FlexGrid-col-sm-12 tr-FlexGrid-col-md-3 tr-FlexGrid-col-lg-3">
-                <div className="tr-ProductDetailSummary-spaceGroup tr-FlexGrid-row">
-                <div bottom="md" class="tr-FlexGrid-col-xs-12 tr-FlexGrid-col-sm-12 tr-FlexGrid-col-md-12 tr-FlexGrid-col-lg-12">
-                <div className="tr-Image tr-Image--cover tr-Image--anchorC" style={{"background-size": "cover", "height": "100%"}}>
-                <img
-                  // className = "tr-Image-img"
-                  src={product.image}
-                  alt="Product image"
-                  width="150"
-                  height="200"
-                ></img>
-                </div>
-                </div>
-                
-                <div className="tr-VerticalSpacing tr-VerticalSpacing--m">
-                <div className="tr-FlexGrid-row">
-                  <div bottom="md" class="tr-FlexGrid-col-xs-12 tr-FlexGrid-col-sm-12 tr-FlexGrid-col-md-12 tr-FlexGrid-col-lg-12">
-                    <div className="tr-ProductDetailSummary-itemDisplay"><strong>Product details</strong></div>
-                  </div>
-                </div>
-                <hr className="tr-HorizontalRule"></hr>
-                <div className="tr-ProductDetailSummary-spaceGroup tr-ProductDetailSummary-productDetails tr-FlexGrid-row">
-                <div className="tr-FlexGrid-col-xs-12 tr-FlexGrid-col-sm-12 tr-FlexGrid-col-md-12 tr-FlexGrid-col-lg-12">
-                <div className="tr-ProductDetailSummary-itemDisplay">{"Publisher: " + product.publisher}</div>
-                </div>
-                <div className="tr-FlexGrid-col-xs-12 tr-FlexGrid-col-sm-12 tr-FlexGrid-col-md-12 tr-FlexGrid-col-lg-12">
-                <div className="tr-ProductDetailSummary-itemDisplay">
-                      {"Jurisdiction: " + product.jurisdiction}
-                </div>
-                </div>
-                <div className="tr-FlexGrid-col-xs-12 tr-FlexGrid-col-sm-12 tr-FlexGrid-col-md-12 tr-FlexGrid-col-lg-12">
-                <div className="tr-ProductDetailSummary-itemDisplay">
-                      {"Publication date: " + d.toLocaleDateString("en-US", options)}
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
+        <div className="tr-Section">
+          <div className="tr-Section-inner">
+            <div className="tr-FlexGrid-containerFluid tr-ProductDetailSummary-innerCard">
+              {/* <h1>Details Page</h1> */}
+              <div id="contentWrapper" className="tr-FlexFrid-row">
+                <div
+                  id="contentDesktop"
+                  className="tr-FlexGrid-hidden-xs tr-FlexGrid-hidden-sm tr-FlexGrid-col-md-12 tr-FlexGrid-col-lg-12"
+                >
+                  <div className="tr-FlexGrid-row">
+                    <div className="grid-col tr-FlexGrid-col-xs-12 tr-FlexGrid-col-sm-12 tr-FlexGrid-col-md-3 tr-FlexGrid-col-lg-3">
+                      <div className="tr-ProductDetailSummary-spaceGroup tr-FlexGrid-row">
+                        <div
+                          bottom="md"
+                          class="tr-FlexGrid-col-xs-12 tr-FlexGrid-col-sm-12 tr-FlexGrid-col-md-12 tr-FlexGrid-col-lg-12"
+                        >
+                          <div
+                            className="tr-Image tr-Image--cover tr-Image--anchorC"
+                            style={{
+                              "background-size": "cover",
+                              height: "100%",
+                            }}
+                          >
+                            <img
+                              // className = "tr-Image-img"
+                              src={product.image}
+                              alt="Product image"
+                              height="300"
+                            ></img>
+                          </div>
+                        </div>
 
-                <div class="tr-FlexGrid-col-xs-12 tr-FlexGrid-col-sm-12 tr-FlexGrid-col-md-5 tr-FlexGrid-col-lg-5">
-                <div class="tr-FlexGrid-col-xs-12 tr-FlexGrid-col-sm-12 tr-FlexGrid-col-md-3 tr-FlexGrid-col-lg-12">
-                <div class="tr-VerticalSpacing tr-VerticalSpacing--m">
-                                                
-                                                {/* <div class="tr-ProductDetailSummary-publisherWrapper">
+                        <div className="tr-VerticalSpacing tr-VerticalSpacing--m">
+                          <div className="tr-FlexGrid-row">
+                            <div
+                              bottom="md"
+                              class="tr-FlexGrid-col-xs-12 tr-FlexGrid-col-sm-12 tr-FlexGrid-col-md-12 tr-FlexGrid-col-lg-12"
+                            >
+                              <div className="tr-ProductDetailSummary-itemDisplay">
+                                <strong>Product details</strong>
+                              </div>
+                            </div>
+                          </div>
+                          <hr className="tr-HorizontalRule"></hr>
+                          <div className="tr-ProductDetailSummary-spaceGroup tr-ProductDetailSummary-productDetails tr-FlexGrid-row">
+                            <div className="tr-FlexGrid-col-xs-12 tr-FlexGrid-col-sm-12 tr-FlexGrid-col-md-12 tr-FlexGrid-col-lg-12">
+                              <div className="tr-ProductDetailSummary-itemDisplay">
+                                Publisher: <strong>{product.publisher}</strong>
+                              </div>
+                            </div>
+                            <div className="tr-FlexGrid-col-xs-12 tr-FlexGrid-col-sm-12 tr-FlexGrid-col-md-12 tr-FlexGrid-col-lg-12">
+                              <div className="tr-ProductDetailSummary-itemDisplay">
+                                Jurisdiction:
+                                <strong> {product.jurisdiction}</strong>
+                              </div>
+                            </div>
+                            <div className="tr-FlexGrid-col-xs-12 tr-FlexGrid-col-sm-12 tr-FlexGrid-col-md-12 tr-FlexGrid-col-lg-12">
+                              <div className="tr-ProductDetailSummary-itemDisplay">
+                                Publication date:
+                                <strong>
+                                  {" "}
+                                  {d.toLocaleDateString("en-US", options)}
+                                </strong>
+                              </div>
+                            </div>
+                            {product.ibsn != null ? (
+                              <div className="tr-FlexGrid-col-xs-12 tr-FlexGrid-col-sm-12 tr-FlexGrid-col-md-12 tr-FlexGrid-col-lg-12">
+                                <div className="tr-ProductDetailSummary-itemDisplay">
+                                  IBSN:
+                                  <strong> {product.ibsn}</strong>
+                                </div>
+                              </div>
+                            ) : (
+                              <></>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="grid-col tr-FlexGrid-col-xs-12 tr-FlexGrid-col-sm-12 tr-FlexGrid-col-md-5 tr-FlexGrid-col-lg-5">
+                      <div class="tr-FlexGrid-col-xs-12 tr-FlexGrid-col-sm-12 tr-FlexGrid-col-md-3 tr-FlexGrid-col-lg-12">
+                        <div class="tr-VerticalSpacing tr-VerticalSpacing--m">
+                          {/* <div class="tr-ProductDetailSummary-publisherWrapper">
                                                     <span class="tr-ProductDetailSummary-publisher">Carswell</span>
                                                 </div>
                                             
@@ -166,37 +197,187 @@ const Details = ({ product }) => {
                                             <div>Availability:
                                                 <strong>In Stock</strong>
                                             </div> */}
-                                        
-                                      
-                <div class="tr-ProductDetailSummary-publisherWrapper">
-                  <span class="tr-ProductDetailSummary-publisher">Carswell</span>
-                </div>
-                <h1 className = "tr-Heading tr-Heading--m"><strong>{product.title}</strong></h1>
-                <div class="tr-ProductDetailSummary-authors">{"Author: " + product.author.join(", ")}</div>
-                </div>
-                <div>{parse(product.text)}</div>
-                <br/>
-                </div>
-                </div>
-                
-                <div>
-                    
-                    {/* {product.ibsn != null ? (
+
+                          <div class="tr-ProductDetailSummary-publisherWrapper">
+                            <span class="tr-ProductDetailSummary-publisher">
+                              Carswell
+                            </span>
+                          </div>
+                          <h1 className="tr-Heading tr-Heading--m">
+                            <strong>{product.title}</strong>
+                          </h1>
+                          <div class="tr-ProductDetailSummary-authors">
+                            {"Author: " + product.author.join(", ")}
+                          </div>
+                        </div>
+                        <div className="tr-VerticalSpacing tr-VerticalSpacing--m">
+                          <div className="tr-Typography tr-Typography--undefined tr-Typography--left tr-pdp-product-description">
+                            {parse(product.text)}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="grid-col tr-FlexGrid-col-xs-12 tr-FlexGrid-col-sm-12 tr-FlexGrid-col-md-4 tr-FlexGrid-col-lg-4">
+                      <div data-react-from-markup-container="true">
+                        <div
+                          class="tr-ProductPricing"
+                          data-rehydratable="tr-ProductPricing"
+                          data-prop-translations='{"ProductPricing.ContactSalesButtonLabel":"Contact Sales","ProductPricing.ContactSalesButtonUrl":"/","ProductPricing.PurchaseOptionLabel":"Purchase option","ProductPricing.StandardPricePurchaseOption":"Purchase the current version, no updates will be sent.","ProductPricing.FormatLabel":"Format","ProductPricing.AddToCartButtonLabel":"Add to cart","ProductPricing.AddToCartButtonUrl":"/","ProductPricing.PrintProductDropdownLabel":"Format","ProductPricing.PrintProductDropdownLabel2":"Quantity","ProductPricing.SoftwareProductDropdownLabel":"Size of your Firm","ProductPricing.SoftwareProductDropdownLabel2":"Users","ProductPricing.CartModalQuantityLabel":"Quantity","ProductPricing.CartModalPriceLabel":"Price","ProductPricing.CartModalPriceSuffix":"each","ProductPricing.CartModalText":"1 item added to cart","ProductPricing.CartModalCloseButtonLabel":"Close","ProductPricing.CartModalCheckoutButtonLabel":"Continue to cart","ProductPricing.CartModalCheckoutUrl":"/content/ue/en-ca/cart.html","ProductPricing.OneTimePurchase":"One-time purchase","ProductPricing.OneTimePurchaseWithSub":"One-time purchase with subscription","ProductPricing.TermLabel":"Term agreement:","ProductPricing.TermUrlText":"Subscription Terms and Conditions.","ProductPricing.TermBtnText":"I agree to these terms","ProductPricing.TermUrl":"https://store.thomsonreuters.ca/en-ca/terms","ProductPricing.PurchaseOptionsLabel":"Purchase options","ProductPricing.ProductAddedToCartLabel":"is added to the cart","ProductPricing.ErrorMessageTitle":"Can&apos;t add to cart","ProductPricing.ErrorMessageDescription":"There’s an issue adding items to your cart. Call us at 1-800-387-5164 for help completing your order.","ProductPricing.ErrorButtonContent":"Close","ProductPricing.ContactUsLabel":"Contact us for pricing","ProductPricing.ContactUsDescription":"Call 1-800-387-5164, select option 1","ProductPricing.MaxQtyError":"To order more than 99 items, call us at 1-800-387-5164.","ProductPricing.CartModalImageUrl":"https://products.thomsonreuters.ca/BookCovers/30834671.gif","ProductPricing.TermContent":"During your subscription term, you will receive subscription services consisting of automatic shipments of updates and supplements to the print product, including but not limited to pocket parts, pamphlets, replacement volumes, or looseleaf pages. ​","ProductPricing.TermCancel":"You may cancel your subscription as outlined in our","ProductPricing.StandardPricePurchaseWithSub":"Purchase the current version, any updates will be sent and billed at a future rate."}'
+                        >
+                          <div class="tr-FlexGrid-containerFluid">
+                            {/* <div class="tr-VerticalSpacing tr-VerticalSpacing--m">
+                              <div class="tr-FlexGrid-row">
+                                <div class="tr-FlexGrid-row">
+                                  <div class="tr-FlexGrid-col-xs-12">
+                                    <p class="tr-Typography tr-Typography--s tr-Typography--left">
+                                      <strong id="format">Format</strong>
+                                    </p>
+                                  </div>
+                                  <div class="tr-FlexGrid-col-xs-12">
+                                    <p class="tr-Typography tr-Typography--xs tr-Typography--left">
+                                      Softbound book
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div> */}
+                            <div class="quantity-row tr-ProductPricing-quantityContent">
+                              <div class="tr-VerticalSpacing tr-VerticalSpacing--l">
+                                <div class="tr-VerticalSpacing tr-VerticalSpacing--xs">
+                                  <div class="tr-FlexGrid-row">
+                                    <div class="tr-FlexGrid-row">
+                                      <div class="tr-FlexGrid-col-xs-4 tr-FlexGrid-col-sm-12 tr-FlexGrid-col-md-12 tr-FlexGrid-col-lg-12">
+                                        <div class="tr-ProductPricing-quantityLabel">
+                                          <div class="tr-Typography tr-Typography--xs tr-Typography--left">
+                                            <strong>Quantity</strong>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="tr-FlexGrid-col-xs-8 tr-FlexGrid-col-sm-12 tr-FlexGrid-col-md-12 tr-FlexGrid-col-lg-12">
+                                        <div class="tr-ProductQuantityInput-counterWrapper">
+                                          <button
+                                            aria-label="Decrease product quantity"
+                                            title="Decrease product quantity"
+                                            class="tr-ProductQuantityInput-counterButton tr-ProductQuantityInput-counterButtonDisabled"
+                                            disabled=""
+                                          >
+                                            -
+                                          </button>
+                                          <label
+                                            for="productQuantity"
+                                            class="tr-ProductQuantityInput-visuallyHidden"
+                                          >
+                                            Product quantity
+                                          </label>
+                                          <input
+                                            id="productQuantity"
+                                            class="tr-ProductQuantityInput-counterDisplay"
+                                            min="1"
+                                            max="99"
+                                            type="number"
+                                            value="1"
+                                            readOnly
+                                          />
+                                          <button
+                                            aria-label="Increase product quantity"
+                                            title="Increase product quantity"
+                                            class="tr-ProductQuantityInput-counterButton"
+                                          >
+                                            +
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="tr-VerticalSpacing tr-VerticalSpacing--m">
+                              <div class="tr-VerticalSpacing tr-VerticalSpacing--xs">
+                                <div class="tr-FlexGrid-row">
+                                  <div class="tr-Typography tr-Typography--xs tr-Typography--left">
+                                    <span class="tr-ProductPricing-optionsHeading">
+                                      Purchase option
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="tr-VerticalSpacing tr-VerticalSpacing--m">
+                                <div class="tr-ProductPricing-purchaseOptionWrapper tr-FlexGrid-row">
+                                  <span>
+                                    <div>
+                                      <div class="tr-Typography tr-Typography--s tr-Typography--left">
+                                        <div class="tr-ProductPricingStandard-optionHeading">
+                                          <strong>
+                                            <span class="tr-Price" lang="en-US">
+                                              {product.price.toLocaleString(
+                                                "en-US",
+                                                {
+                                                  style: "currency",
+                                                  currency: "USD",
+                                                }
+                                              )}
+                                              <span class="tr-PriceTerms"></span>
+                                            </span>
+                                            <span> - One-time purchase</span>
+                                          </strong>
+                                        </div>
+                                      </div>
+                                      <div class="tr-Typography tr-Typography--undefined tr-Typography--left">
+                                        Purchase the current version, no updates
+                                        will be sent.
+                                      </div>
+                                    </div>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="tr-ProductPricing-addButtonMobile">
+                              <div>
+                                <div class="tr-VerticalSpacing tr-VerticalSpacing--m">
+                                  <div class="tr-FlexGrid-row">
+                                    <div class="tr-ProductPricing-addToCartBtn">
+                                      <button
+                                        class="tr-Anchor tr-Button tr-Button--primary tr-Button--circular"
+                                        title=""
+                                        type="button"
+                                        id="addToCartBtn"
+                                      >
+                                        <span class="tr-Button-body">
+                                          Add to cart
+                                        </span>
+                                      </button>
+                                      <div
+                                        aria-live="polite"
+                                        aria-atomic="true"
+                                        class="tr-ProductPricing-ariaLiveNotification"
+                                      ></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* <div>
+                     {product.ibsn != null ? (
                       <p className="ibsn">{"IBSN: " + product.ibsn}</p>
                     ) : (
                       <></>
-                    )} */}
-                    <p className="price">{"Price: $" + product.price}</p>
-                    
+                    )} 
+                      <p className="price">{"Price: $" + product.price}</p>
+                    </div> */}
+                  </div>
                 </div>
               </div>
-            </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
     </>
   );
 };
