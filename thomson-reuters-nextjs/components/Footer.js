@@ -54,7 +54,6 @@ export default function Footer() {
                           aria-autocomplete="both"
                           role="combobox"
                           aria-activedescendant=""
-                          value=""
                         />
                         <div class="tr-SearchInput-buttons">
                           <button
@@ -167,8 +166,9 @@ export default function Footer() {
                       <ul class="tr-SiteFooterNavList-inner">
                         <li class="tr-SiteFooterNavItem">
                           <a
+                            target="_blank"
                             class="tr-SiteFooterNavItem-link"
-                            href="/en/login.html"
+                            href="https://www.thomsonreuters.ca/en/login.html"
                           >
                             Product logins
                           </a>
@@ -176,8 +176,9 @@ export default function Footer() {
 
                         <li class="tr-SiteFooterNavItem">
                           <a
+                            target="_blank"
                             class="tr-SiteFooterNavItem-link"
-                            href="http://ir.thomsonreuters.com/phoenix.zhtml?c=76540&amp;p=irol-irhome"
+                            href="http://ir.thomsonreuters.com/phoenix.zhtml?c=76540&p=irol-irhome"
                           >
                             Investor News
                           </a>
@@ -222,8 +223,9 @@ export default function Footer() {
                       <ul class="tr-SiteFooterNavList-inner">
                         <li class="tr-SiteFooterNavItem">
                           <a
+                            target="_blank"
                             class="tr-SiteFooterNavItem-link"
-                            href="/en/legal.html"
+                            href="https://www.thomsonreuters.ca/en/legal.html"
                           >
                             Legal
                           </a>
@@ -231,8 +233,9 @@ export default function Footer() {
 
                         <li class="tr-SiteFooterNavItem">
                           <a
+                            target="_blank"
                             class="tr-SiteFooterNavItem-link"
-                            href="/en/tax-accounting.html"
+                            href="https://www.thomsonreuters.ca/en/tax-accounting.html"
                           >
                             Tax &amp; accounting
                           </a>
@@ -240,8 +243,9 @@ export default function Footer() {
 
                         <li class="tr-SiteFooterNavItem">
                           <a
+                            target="_blank"
                             class="tr-SiteFooterNavItem-link"
-                            href="https://agency.reuters.com/en.html?utm_source=website&amp;utm_medium=tr&amp;utm_campaign=site-referral&amp;utm_content=canada&amp;utm_term=0"
+                            href="https://agency.reuters.com/en.html?utm_source=website&utm_medium=tr&utm_campaign=site-referral&utm_content=canada&utm_term=0"
                           >
                             News &amp; media
                           </a>
@@ -286,8 +290,9 @@ export default function Footer() {
                       <ul class="tr-SiteFooterNavList-inner">
                         <li class="tr-SiteFooterNavItem">
                           <a
+                            target="_blank"
                             class="tr-SiteFooterNavItem-link"
-                            href="/en/about-us.html"
+                            href="https://www.thomsonreuters.ca/en/about-us.html"
                           >
                             About Us
                           </a>
@@ -295,8 +300,9 @@ export default function Footer() {
 
                         <li class="tr-SiteFooterNavItem">
                           <a
+                            target="_blank"
                             class="tr-SiteFooterNavItem-link"
-                            href="/en/press-releases.html"
+                            href="https://www.thomsonreuters.ca/en/press-releases.html"
                           >
                             Press Releases
                           </a>
@@ -304,6 +310,7 @@ export default function Footer() {
 
                         <li class="tr-SiteFooterNavItem">
                           <a
+                            target="_blank"
                             class="tr-SiteFooterNavItem-link"
                             href="https://www.thomsonreuters.com/en/careers/where-we-are/north-america/canada.html"
                           >
@@ -313,6 +320,7 @@ export default function Footer() {
 
                         <li class="tr-SiteFooterNavItem">
                           <a
+                            target="_blank"
                             class="tr-SiteFooterNavItem-link"
                             href="https://blogs.thomsonreuters.com/answerson/"
                           >
@@ -359,8 +367,9 @@ export default function Footer() {
                       <ul class="tr-SiteFooterNavList-inner">
                         <li class="tr-SiteFooterNavItem">
                           <a
+                            target="_blank"
                             class="tr-SiteFooterNavItem-link"
-                            href="/en/training-and-support.html"
+                            href="https://www.thomsonreuters.ca/en/training-and-support.html"
                           >
                             Support &amp; Training
                           </a>
@@ -368,8 +377,9 @@ export default function Footer() {
 
                         <li class="tr-SiteFooterNavItem">
                           <a
+                            target="_blank"
                             class="tr-SiteFooterNavItem-link"
-                            href="/en/contact-us.html"
+                            href="https://www.thomsonreuters.ca/en/contact-us.html"
                           >
                             Office Locations
                           </a>
@@ -377,6 +387,7 @@ export default function Footer() {
 
                         <li class="tr-SiteFooterNavItem">
                           <a
+                            target="_blank"
                             class="tr-SiteFooterNavItem-link"
                             href="http://thomsonreuters.com/en/contact-us/media-contacts.html"
                           >
@@ -386,8 +397,9 @@ export default function Footer() {
 
                         <li class="tr-SiteFooterNavItem">
                           <a
+                            target="_blank"
                             class="tr-SiteFooterNavItem-link"
-                            href="/en/contact-us.html"
+                            href="https://www.thomsonreuters.ca/en/contact-us.html"
                           >
                             Contact Sales
                           </a>
@@ -432,6 +444,7 @@ export default function Footer() {
                       <ul class="tr-SiteFooterNavList-inner">
                         <li class="tr-SiteFooterNavItem">
                           <a
+                            target="_blank"
                             class="tr-SiteFooterNavItem-link"
                             href="https://store.thomsonreuters.ca/en-ca/accessibility"
                           >
@@ -441,8 +454,9 @@ export default function Footer() {
 
                         <li class="tr-SiteFooterNavItem">
                           <a
+                            target="_blank"
                             class="tr-SiteFooterNavItem-link"
-                            href="/content/dam/ewp-m/documents/canada-store/en/pdf/fact-sheets/carswell-accessibility-plan-v2.pdf"
+                            href="https://www.thomsonreuters.ca/content/dam/ewp-m/documents/canada-store/en/pdf/fact-sheets/carswell-accessibility-plan-v2.pdf"
                           >
                             Multi-Year Accessibility Plan
                           </a>
@@ -450,6 +464,7 @@ export default function Footer() {
 
                         <li class="tr-SiteFooterNavItem">
                           <a
+                            target="_blank"
                             class="tr-SiteFooterNavItem-link"
                             href="https://store.thomsonreuters.ca/en-ca/accessibility/commitment-to-accessibility"
                           >
@@ -459,6 +474,7 @@ export default function Footer() {
 
                         <li class="tr-SiteFooterNavItem">
                           <a
+                            target="_blank"
                             class="tr-SiteFooterNavItem-link"
                             href="https://store.thomsonreuters.ca/en-ca/accessibility/academic-materials"
                           >
@@ -505,6 +521,7 @@ export default function Footer() {
                       <ul class="tr-SiteFooterNavList-inner">
                         <li class="tr-SiteFooterNavItem">
                           <a
+                            target="_blank"
                             class="tr-SiteFooterNavItem-link"
                             href="https://twitter.com/TRCanadaLegal"
                           >
@@ -514,6 +531,7 @@ export default function Footer() {
 
                         <li class="tr-SiteFooterNavItem">
                           <a
+                            target="_blank"
                             class="tr-SiteFooterNavItem-link"
                             href="https://twitter.com/TRCanadaTax"
                           >
@@ -523,6 +541,7 @@ export default function Footer() {
 
                         <li class="tr-SiteFooterNavItem">
                           <a
+                            target="_blank"
                             class="tr-SiteFooterNavItem-link"
                             href="https://www.linkedin.com/showcase/thomson-reuters-canada-legal/"
                           >
@@ -532,6 +551,7 @@ export default function Footer() {
 
                         <li class="tr-SiteFooterNavItem">
                           <a
+                            target="_blank"
                             class="tr-SiteFooterNavItem-link"
                             href="https://www.linkedin.com/showcase/trcanadatax/"
                           >
@@ -541,6 +561,7 @@ export default function Footer() {
 
                         <li class="tr-SiteFooterNavItem">
                           <a
+                            target="_blank"
                             class="tr-SiteFooterNavItem-link"
                             href="https://www.youtube.com/channel/UCbpBq9ALXH51Ow9h-L6wb6w"
                           >
@@ -550,6 +571,7 @@ export default function Footer() {
 
                         <li class="tr-SiteFooterNavItem">
                           <a
+                            target="_blank"
                             class="tr-SiteFooterNavItem-link"
                             href="https://www.youtube.com/channel/UCjfeBKSwEzZODpHRrn5TXDg/videos"
                           >
