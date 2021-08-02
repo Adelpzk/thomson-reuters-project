@@ -76,25 +76,6 @@ const Details = ({ product }) => {
   var d = new Date(product.publication_date);
 
   return (
-<<<<<<< HEAD
-      <div>
-          <h1>{ product.title }</h1>
-          <img src={product.image} alt="Product image" width="200" height="200"></img>
-          <div>
-          {parse(product.text)}
-          </div>
-          <br></br>
-          <div>
-          <h4>{ "Publication date: " + d.toLocaleDateString("en-US", options) }</h4>
-          <h4>{ "IBSN: " + product.ibsn }</h4>
-          <h4>{ "Price: $" + product.price }</h4>
-          <h4>{ "Author: " + product.author }</h4>
-          <h4>{ "Publisher: " + product.publisher }</h4>
-          <h4>{ "Jurisdiction: " + product.jurisdiction }</h4>
-          </div>
-        </body>
-      </main>
-=======
     <>
       <div className="product">
         <div className="tr-Section">
@@ -397,7 +378,6 @@ const Details = ({ product }) => {
           </div>
         </div>
       </div>
->>>>>>> 7b17f3b439e101762452693aa9d165ca719738c1
     </>
   );
 };
