@@ -68,7 +68,7 @@ export default function Blogs({ blogs }) {
                   <div className="tr-Grid-item">
                     <div className="tr-VerticalSpacing tr-VerticalSpacing--m">
                       <h1 className="tr-Heading tr-Heading--xl">
-                        <b>Thomson Reuter Institute Blogs</b>
+                        <b>Thomson Reuters Institute Blogs</b>
                       </h1>
                     </div>
                     <div className="tr-VerticalSpacing tr-VerticalSpacing--l">
@@ -95,7 +95,7 @@ export default function Blogs({ blogs }) {
         </div>
       </div>
       {/* <div className="blogs">
-        <h1>Thomson Reuter Institute Blogs</h1>
+        <h1>Thomson Reuters Institute Blogs</h1>
         <p>
           The Thomson Reuters Institute brings together people from across the
           legal, corporate, tax & accounting, and government communities to

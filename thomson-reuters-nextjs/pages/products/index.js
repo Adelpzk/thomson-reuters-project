@@ -76,7 +76,7 @@ export default function Products({ products }) {
                         </div>
                         <div className="tr-VerticalSpacing tr-VerticalSpacing--m">
                           <h1 className="tr-Heading tr-Heading--xl">
-                            Thomson Reuter Books and Products
+                            Thomson Reuters Books and Products
                             <br></br>
                           </h1>
                         </div>
@@ -102,7 +102,7 @@ export default function Products({ products }) {
       </div>
       {/* </div> */}
 
-      {/* <h1>Thomson Reuter Books and Products</h1>
+      {/* <h1>Thomson Reuters Books and Products</h1>
         <p>
           Explore the several books and products offered by Thomson Reuters.
         </p>

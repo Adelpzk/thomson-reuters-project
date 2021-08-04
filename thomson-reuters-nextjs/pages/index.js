@@ -131,13 +131,13 @@ export default function Home() {
                       <div className="tr-TextCardBase-body">
                         <div className="tr-TextCardBase-heading">
                           <h3 className="tr-Heading tr-Heading--xs">
-                            <strong>Thomson Reuter Blogs</strong>
+                            <strong>Thomson Reuters Blogs</strong>
                           </h3>
                         </div>
                         <div class="tr-TextCardBase-description">
                           <p>
                             Stay up-to-date with the latest developments from
-                            the Thomson Reuter Community
+                            the Thomson Reuters Community
                           </p>   
                           <Link href="/blogs">
                             <a class="link-button tr-Anchor tr-Button tr-Button--primary ">
@@ -152,7 +152,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              {/* <h2>Thomson Reuter Blogs</h2>
+              {/* <h2>Thomson Reuters Blogs</h2>
               <p>
                 Stay up-to-date with the latest developments from the Thomson
                 Reuter Community
@@ -192,7 +192,7 @@ export default function Home() {
                       <div className="tr-TextCardBase-body">
                         <div className="tr-TextCardBase-heading">
                           <h3 className="tr-Heading tr-Heading--xs">
-                            <strong>Thomson Reuter Products</strong>
+                            <strong>Thomson Reuters Products</strong>
                           </h3>
                         </div>
                         <div class="tr-TextCardBase-description">
@@ -214,7 +214,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              {/*         <h2>Thomson Reuter Products</h2>
+              {/*         <h2>Thomson Reuters Products</h2>
         <p>
           Learn more about the products that legal, tax, and business
           professionals rely on to deliver their best work.
