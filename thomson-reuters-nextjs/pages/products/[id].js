@@ -55,6 +55,31 @@ export const getStaticProps = async (context) => {
     }
   `;
 
+  const GQL_API_BLOG = "http://frp.vlb.mybluehost.me/graphql";
+  const GQL_QUERY_BLOG = `
+  query{
+    posts(where: {title:"agencies issue faqs (part 47) about mandatory preventive coverage of hiv prep"}){
+      nodes {
+        postId
+          title
+          date
+          featuredImage {
+            node {
+              sourceUrl
+            }
+          }
+        author {
+          node {
+            name
+          }
+        }
+        date
+        content
+      }
+    }
+  }
+`;
+
   const res = await fetch(GQL_API, {
     method: "POST",
     headers: {
@@ -66,14 +91,31 @@ export const getStaticProps = async (context) => {
   });
   const data = await res.json();
 
+  const res_blog = await fetch(GQL_API_BLOG, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      query: GQL_QUERY_BLOG,
+    }),
+  });
+  const data_blog = await res_blog.json();
+
   return {
-    props: { product: data.data.products[0] },
+    props: {
+      product: data.data.products[0],
+      blog: data_blog.data.posts.nodes[0],
+    },
   };
 };
 
-const Details = ({ product }) => {
+const Details = ({ product, blog }) => {
   var options = { year: "numeric", month: "numeric", day: "numeric" };
   var d = new Date(product.publication_date);
+
+  var d_blog = new Date(blog.date);
+  var options_blog = { year: "numeric", month: "short", day: "numeric" };
 
   return (
     <>
@@ -371,6 +413,97 @@ const Details = ({ product }) => {
                     )} 
                       <p className="price">{"Price: $" + product.price}</p>
                     </div> */}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="tr-Section tr-Section--grayLightest">
+          <div className="tr-Section-inner">
+            <div className="tr-VerticalSpacing tr-VerticalSpacing--m">
+              <div className="tr-Header">
+                <div className="tr-Header-eyebrow">
+                  <p className="tr-Eyebrow u-typographySmallCaps"></p>
+                </div>
+                <div className="tr-Header-heading">
+                  <div className="tr-VerticalSpacing tr-VerticalSpacing--xs">
+                    <h2 className="tr-Heading tr-Heading--m">
+                      <b>Latest Blog Update</b>
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="tr-VerticalSpacing tr-VerticalSpacing--m">
+              <div className="tr-PairedCard">
+                <div className="textcard-base">
+                  <div className="tr-CardBase-inner">
+                    <div className="tr-PairedCard-content tr-PairedCard-content-product ">
+                      <div className="recent-blog-image card-image tr-PairedCard-image">
+                        <div
+                          className="tr-Image tr-Image--cover tr-Image--anchorC"
+                          style={{
+                            "background-image": `${blog.featuredImage.node.sourceUrl}`,
+                          }}
+                        >
+                          <img
+                            className="tr-Image-img"
+                            alt=""
+                            src={blog.featuredImage.node.sourceUrl}
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                      <div className="card-content tr-PairedCard-contentInner">
+                        <div className="tr-TextCardBase-content">
+                          <div className="tr-TextCardBase-body">
+                            <div className="tr-TextCardBase-heading">
+                              <h3 className="tr-Heading tr-Heading--xs">
+                                <strong>{blog.title}</strong>
+                              </h3>
+                            </div>
+                            <div class="tr-TextCardBase-description">
+                              <div className="recent-blog-content">
+                                {parse(blog.content)}
+                              </div>
+                              <p>...</p>
+                              <div>
+                                <br />
+                                {d.toLocaleDateString(
+                                  "en-US",
+                                  options_blog
+                                )} | {blog.author.node.name}
+                              </div>
+                              <a
+                                href={
+                                  "/blogs/" +
+                                  encodeURIComponent(
+                                    blog.title
+                                      .toLowerCase()
+                                      .replace(/\s+/g, "-")
+                                  )
+                                }
+                                class="link-button tr-Anchor tr-Button tr-Button--primary "
+                              >
+                                <span class="tr-Button-body">
+                                  Continue Reading
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                          {/* <div class="tr-TextCardBase-footer">
+                            <div class="tr-ArticleCardFooter">
+                              <div class="tr-ArticleCardFooter-dateAndAttribution">
+                                {d.toLocaleDateString("en-US", options_blog)} |{" "}
+                                {blog.author.node.name}
+                              </div>
+                            </div>
+                          </div> */}
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

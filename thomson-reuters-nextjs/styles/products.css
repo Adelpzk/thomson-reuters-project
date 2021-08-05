@@ -1375,3 +1375,12 @@ button {
 .product-desc {
   max-width: 85% !important;
 }
+
+.recent-blog-content :not(:nth-child(3)) {
+  display: none;
+}
+
+.recent-blog-image {
+  height: 100% !important;
+  width: 40%;
+}

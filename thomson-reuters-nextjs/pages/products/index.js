@@ -16,7 +16,6 @@ export const getStaticProps = async () => {
         publisher
         publication_date
         image
-        text
         id
         description
       }
