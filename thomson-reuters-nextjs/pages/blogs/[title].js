@@ -40,10 +40,14 @@ export const getStaticPaths = async () => {
     //console.log(typeof blog.postId);
     return {
       params: {
-        title: blog.title.toLowerCase().replace(/\s+/g, "-").toString(),
+        title: encodeURIComponent(
+          blog.title.toLowerCase().replace(/\s+/g, "-").toString()
+        ).replace(/%/g, "~"),
       },
     };
   });
+
+  //console.log(paths);
 
   return {
     paths,
@@ -64,7 +68,9 @@ export const getStaticProps = async (context) => {
   //GraphQL query to fetch the necessary info to displays list of blogs
   const GQL_QUERY = `
   query{
-    posts(where: {title:"${context.params.title.replace(/-+/g, " ")}"}){
+    posts(where: {title:"${decodeURIComponent(
+      context.params.title.replace(/-+/g, " ").replace(/~/g, "%")
+    )}"}){
       nodes {
         postId
         title

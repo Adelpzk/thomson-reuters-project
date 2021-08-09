@@ -446,7 +446,7 @@ const Details = ({ product, blog }) => {
                                     blog.title
                                       .toLowerCase()
                                       .replace(/\s+/g, "-")
-                                  )
+                                  ).replace(/%/g, "~")
                                 }
                                 className="link-button tr-Anchor tr-Button tr-Button--primary "
                               >

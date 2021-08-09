@@ -128,7 +128,7 @@ export default function Blogs({ blogs }) {
                         "/blogs/" +
                         encodeURIComponent(
                           blog.title.toLowerCase().replace(/\s+/g, "-")
-                        )
+                        ).replace(/%/g, "~")
                       }
                       title=""
                     >
@@ -156,7 +156,7 @@ export default function Blogs({ blogs }) {
                           "/blogs/" +
                           encodeURIComponent(
                             blog.title.toLowerCase().replace(/\s+/g, "-")
-                          )
+                          ).replace(/%/g, "~")
                         }
                         key={blog.postId}
                         passHref
