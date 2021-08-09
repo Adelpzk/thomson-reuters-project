@@ -3,6 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import parse from "html-react-parser";
 
+/**
+ * getStaticPaths function allows you to specify dynamic routes to pre-render pages based on paths data.
+ * In this case, the function creates paths using product ids (localhost:3000/products/[id]) and uses
+ *    the Details compoenent to make the pages
+ */
 export const getStaticPaths = async () => {
   const GQL_API = "http://localhost:3030";
   const GQL_QUERY = `
@@ -12,6 +17,8 @@ export const getStaticPaths = async () => {
       }
     }
   `;
+
+  //fetch function to send the graphql query to the graphql server
   const res = await fetch(GQL_API, {
     method: "POST",
     headers: {
@@ -35,9 +42,17 @@ export const getStaticPaths = async () => {
   };
 };
 
+/**
+ * getStaticProps allows Next.js to pre-render this page at build time using the props
+ *    returned by this function
+ */
 export const getStaticProps = async (context) => {
   const id = context.params.id;
+
+  // MongoDB GraphQL localhost url (Must do 'npm start' inside thomson-reuters-graphql folder)
   const GQL_API = "http://localhost:3030";
+
+  //GraphQL query to fetch the necessary info to display on the individual product page accordign to product id
   const GQL_QUERY = `
     query{
       products(id: ${id}){
@@ -55,7 +70,10 @@ export const getStaticProps = async (context) => {
     }
   `;
 
+  // Wordpress GraphQL url
   const GQL_API_BLOG = "http://frp.vlb.mybluehost.me/graphql";
+
+  //GraphQL query to fetch the necessary info to display a blog udpate on the page
   const GQL_QUERY_BLOG = `
   query{
     posts(where: {title:"agencies issue faqs (part 47) about mandatory preventive coverage of hiv prep"}){
@@ -80,6 +98,7 @@ export const getStaticProps = async (context) => {
   }
 `;
 
+  //fetch function to send the graphql query to the MongoDB graphql server
   const res = await fetch(GQL_API, {
     method: "POST",
     headers: {
@@ -91,6 +110,7 @@ export const getStaticProps = async (context) => {
   });
   const data = await res.json();
 
+  //fetch function to send the graphql query to the wordpress graphql server
   const res_blog = await fetch(GQL_API_BLOG, {
     method: "POST",
     headers: {
@@ -102,6 +122,7 @@ export const getStaticProps = async (context) => {
   });
   const data_blog = await res_blog.json();
 
+  //returns the product data and blogs data recieved from the query as a props to the page needed to be rendered
   return {
     props: {
       product: data.data.products[0],
@@ -203,43 +224,6 @@ const Details = ({ product, blog }) => {
                     <div class="grid-col tr-FlexGrid-col-xs-12 tr-FlexGrid-col-sm-12 tr-FlexGrid-col-md-5 tr-FlexGrid-col-lg-5">
                       <div class="tr-FlexGrid-col-xs-12 tr-FlexGrid-col-sm-12 tr-FlexGrid-col-md-3 tr-FlexGrid-col-lg-12">
                         <div class="tr-VerticalSpacing tr-VerticalSpacing--m">
-                          {/* <div class="tr-ProductDetailSummary-publisherWrapper">
-                                                    <span class="tr-ProductDetailSummary-publisher">Carswell</span>
-                                                </div>
-                                            
-                                            <h1 class="tr-Heading tr-Heading--m">
-                                                <strong>ImmQuest</strong>
-                                            </h1>
-                                            <div class="tr-ProductDetailSummary-authors">Author:
-                                                
-                                                    <a class="tr-Anchor tr-Link tr-Link--inline authorLink" tabindex="0" href="#" id="Mario Bellissimo" data-biography="Mario D. Bellissimo is a graduate of Osgoode Hall Law School and is a Certified Specialist in Citizenship and Immigration Law and Refugee Protection. He is the founder of BELLISSIMO LAW GROUP PC with a practice focus on litigation and immigration inadmissibility. Mr. Bellissimo has appeared before all levels of immigration tribunals and courts including the Supreme Court of Canada. He is a Past Chair of the Canadian Bar Association National Immigration Law Section and serves on multiple stakeholder committees involving Immigration, Refugees and Citizenship Canada, the Canada Border Services Agency, Service Canada, the Federal Courts, the Department of Justice, the Immigration and Refugee Board and Continuing Legal Education.Mr. Bellissimo is also the author of Canadian Citizenship and Immigration Inadmissibility Law, Second Edition; Canadian Citizenship and Immigration Inadmissibility: Criminal Law Edition; A Practical Guide to Canadian Citizenship and Inadmissibility Law - Immigration Practitioners&amp;#39; Editi" title="">Mario Bellissimo
-                                                    </a>
-                                                
-                                            </div>
-                                            <div id="authorDetails-modal" class="authorModal">
-                                                <div tabindex="0" id="modalContent" role="dialog" aria-modal="true" class="modal-content">
-                                                    <div class="author-modal-header">
-                                                    <span class="close">
-                                                        <button id="close-button">
-                                                        <span class="close-text">Close </span>
-                                                        <span class="close-icon">×</span>
-                                                        </button>
-                                                    </span>
-                                                    </div>
-                                                    <div class="author-model-content">
-                                                        <div class="author-model-title">
-                                                            <h1 id="authorDetailsName"></h1>
-                                                        </div>
-                                                        <div class="author-model-description">
-                                                            <p id="authorDetailsBiography"></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div>Availability:
-                                                <strong>In Stock</strong>
-                                            </div> */}
-
                           <div class="tr-ProductDetailSummary-publisherWrapper">
                             <span class="tr-ProductDetailSummary-publisher">
                               Carswell
@@ -268,22 +252,6 @@ const Details = ({ product, blog }) => {
                           data-prop-translations='{"ProductPricing.ContactSalesButtonLabel":"Contact Sales","ProductPricing.ContactSalesButtonUrl":"/","ProductPricing.PurchaseOptionLabel":"Purchase option","ProductPricing.StandardPricePurchaseOption":"Purchase the current version, no updates will be sent.","ProductPricing.FormatLabel":"Format","ProductPricing.AddToCartButtonLabel":"Add to cart","ProductPricing.AddToCartButtonUrl":"/","ProductPricing.PrintProductDropdownLabel":"Format","ProductPricing.PrintProductDropdownLabel2":"Quantity","ProductPricing.SoftwareProductDropdownLabel":"Size of your Firm","ProductPricing.SoftwareProductDropdownLabel2":"Users","ProductPricing.CartModalQuantityLabel":"Quantity","ProductPricing.CartModalPriceLabel":"Price","ProductPricing.CartModalPriceSuffix":"each","ProductPricing.CartModalText":"1 item added to cart","ProductPricing.CartModalCloseButtonLabel":"Close","ProductPricing.CartModalCheckoutButtonLabel":"Continue to cart","ProductPricing.CartModalCheckoutUrl":"/content/ue/en-ca/cart.html","ProductPricing.OneTimePurchase":"One-time purchase","ProductPricing.OneTimePurchaseWithSub":"One-time purchase with subscription","ProductPricing.TermLabel":"Term agreement:","ProductPricing.TermUrlText":"Subscription Terms and Conditions.","ProductPricing.TermBtnText":"I agree to these terms","ProductPricing.TermUrl":"https://store.thomsonreuters.ca/en-ca/terms","ProductPricing.PurchaseOptionsLabel":"Purchase options","ProductPricing.ProductAddedToCartLabel":"is added to the cart","ProductPricing.ErrorMessageTitle":"Can&apos;t add to cart","ProductPricing.ErrorMessageDescription":"There’s an issue adding items to your cart. Call us at 1-800-387-5164 for help completing your order.","ProductPricing.ErrorButtonContent":"Close","ProductPricing.ContactUsLabel":"Contact us for pricing","ProductPricing.ContactUsDescription":"Call 1-800-387-5164, select option 1","ProductPricing.MaxQtyError":"To order more than 99 items, call us at 1-800-387-5164.","ProductPricing.CartModalImageUrl":"https://products.thomsonreuters.ca/BookCovers/30834671.gif","ProductPricing.TermContent":"During your subscription term, you will receive subscription services consisting of automatic shipments of updates and supplements to the print product, including but not limited to pocket parts, pamphlets, replacement volumes, or looseleaf pages. ​","ProductPricing.TermCancel":"You may cancel your subscription as outlined in our","ProductPricing.StandardPricePurchaseWithSub":"Purchase the current version, any updates will be sent and billed at a future rate."}'
                         >
                           <div class="tr-FlexGrid-containerFluid">
-                            {/* <div class="tr-VerticalSpacing tr-VerticalSpacing--m">
-                              <div class="tr-FlexGrid-row">
-                                <div class="tr-FlexGrid-row">
-                                  <div class="tr-FlexGrid-col-xs-12">
-                                    <p class="tr-Typography tr-Typography--s tr-Typography--left">
-                                      <strong id="format">Format</strong>
-                                    </p>
-                                  </div>
-                                  <div class="tr-FlexGrid-col-xs-12">
-                                    <p class="tr-Typography tr-Typography--xs tr-Typography--left">
-                                      Softbound book
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div> */}
                             <div class="quantity-row tr-ProductPricing-quantityContent">
                               <div class="tr-VerticalSpacing tr-VerticalSpacing--l">
                                 <div class="tr-VerticalSpacing tr-VerticalSpacing--xs">
@@ -404,15 +372,6 @@ const Details = ({ product, blog }) => {
                         </div>
                       </div>
                     </div>
-
-                    {/* <div>
-                     {product.ibsn != null ? (
-                      <p className="ibsn">{"IBSN: " + product.ibsn}</p>
-                    ) : (
-                      <></>
-                    )} 
-                      <p className="price">{"Price: $" + product.price}</p>
-                    </div> */}
                   </div>
                 </div>
               </div>
@@ -471,10 +430,11 @@ const Details = ({ product, blog }) => {
                               <p>...</p>
                               <div>
                                 <br />
-                                {d.toLocaleDateString(
+                                {d_blog.toLocaleDateString(
                                   "en-US",
                                   options_blog
-                                )} | {blog.author.node.name}
+                                )}{" "}
+                                | {blog.author.node.name}
                               </div>
                               <a
                                 href={

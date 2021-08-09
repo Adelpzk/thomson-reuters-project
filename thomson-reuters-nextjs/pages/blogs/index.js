@@ -3,8 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 import PopularTopics from "../../components/PopularTopics";
 
+/**
+ * getStaticProps allows Next.js to pre-render this page at build time using the props
+ *    returned by this function
+ */
 export const getStaticProps = async () => {
+  // Wordpress GraphQL url
   const GQL_API = `http://frp.vlb.mybluehost.me/graphql`;
+
+  //GraphQL query to fetch the necessary info to displays list of blogs
   const GQL_QUERY = `
     query{
       posts{
@@ -21,6 +28,8 @@ export const getStaticProps = async () => {
       }
     }
     `;
+
+  //fetch function to send the graphql query to the graphql server
   const res = await fetch(GQL_API, {
     method: "POST",
     headers: {
@@ -34,11 +43,13 @@ export const getStaticProps = async () => {
   const result = await res.json();
   //console.log(result.data.posts.nodes);
 
+  //returns the blog data recieved from the query as a props to the page needed to be rendered
   return {
     props: { blogs: result.data.posts.nodes },
   };
 };
 export default function Blogs({ blogs }) {
+  //options for the date-time object
   var options = { year: "numeric", month: "short", day: "numeric" };
   return (
     <>
@@ -94,16 +105,6 @@ export default function Blogs({ blogs }) {
           </div>
         </div>
       </div>
-      {/* <div className="blogs">
-        <h1>Thomson Reuters Institute Blogs</h1>
-        <p>
-          The Thomson Reuters Institute brings together people from across the
-          legal, corporate, tax & accounting, and government communities to
-          ignite conversation and debate, make sense of the latest events and
-          trends, and provide essential guidance on the opportunities and
-          challenges facing their world today.
-        </p>
-      </div> */}
       <div className="container">
         <PopularTopics />
         <div

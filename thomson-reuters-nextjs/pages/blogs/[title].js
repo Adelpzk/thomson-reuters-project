@@ -5,6 +5,11 @@ import parse from "html-react-parser";
 import SideBar from "../../components/SideBar";
 import ArticleShare from "../../components/ArticleShare";
 
+/**
+ * getStaticPaths function allows you to specify dynamic routes to pre-render pages based on paths data.
+ * In this case, the function creates paths using blog titles (localhost:3000/products/[title]) and uses
+ *    the Details compoenent to make the pages
+ */
 export const getStaticPaths = async () => {
   const GQL_API = `http://frp.vlb.mybluehost.me/graphql`;
   const GQL_QUERY = `
@@ -17,6 +22,8 @@ export const getStaticPaths = async () => {
       }
     }
     `;
+
+  //fetch function to send the graphql query to the graphql server
   const res = await fetch(GQL_API, {
     method: "POST",
     headers: {
@@ -44,9 +51,17 @@ export const getStaticPaths = async () => {
   };
 };
 
+/**
+ * getStaticProps allows Next.js to pre-render this page at build time using the props
+ *    returned by this function
+ */
 export const getStaticProps = async (context) => {
   //console.log(context.params.title.replace(/-+/g, " "));
+
+  // Wordpress GraphQL url
   const GQL_API = `http://frp.vlb.mybluehost.me/graphql`;
+
+  //GraphQL query to fetch the necessary info to displays list of blogs
   const GQL_QUERY = `
   query{
     posts(where: {title:"${context.params.title.replace(/-+/g, " ")}"}){
@@ -80,6 +95,8 @@ export const getStaticProps = async (context) => {
   }
     `;
   //console.log(GQL_QUERY);
+
+  //fetch function to send the graphql query to the graphql server
   const res = await fetch(GQL_API, {
     method: "POST",
     headers: {
@@ -93,6 +110,7 @@ export const getStaticProps = async (context) => {
   const result = await res.json();
   //console.log(result);
 
+  //returns the blog data recieved from the query as a props to the page needed to be rendered
   return {
     props: { blog: result.data.posts.nodes[0] },
   };

@@ -6,8 +6,15 @@ import { Profiler } from "react";
 import SearchFilter from "../../components/SearchFilter";
 import PaginationContainer from "../../components/PaginationContainer";
 
+/**
+ * getStaticProps allows Next.js to pre-render this page at build time using the props
+ *    returned by this function
+ */
 export const getStaticProps = async () => {
+  // MongoDB GraphQL localhost url (Must do 'npm start' inside thomson-reuters-graphql folder)
   const GQL_API = "http://localhost:3030";
+
+  //GraphQL query to fetch the necessary info to displays list of products
   const GQL_QUERY = `
     query{
       products{
@@ -21,6 +28,8 @@ export const getStaticProps = async () => {
       }
     }
   `;
+
+  //fetch function to send the graphql query to the graphql server
   const res = await fetch(GQL_API, {
     method: "POST",
     headers: {
@@ -32,12 +41,14 @@ export const getStaticProps = async () => {
   });
   const data = await res.json();
 
+  //returns the product data recieved from the query as a props to the page needed to be rendered
   return {
     props: { products: data.data.products },
   };
 };
 
 export default function Products({ products }) {
+  //options for the date-time object
   var options = { year: "numeric", month: "short", day: "numeric" };
 
   return (
@@ -99,13 +110,6 @@ export default function Products({ products }) {
           </div>
         </div>
       </div>
-      {/* </div> */}
-
-      {/* <h1>Thomson Reuters Books and Products</h1>
-        <p>
-          Explore the several books and products offered by Thomson Reuters.
-        </p>
-      </div> */}
       <div className="section aem-GridColumn aem-GridColumn--default--12">
         <div className="tr-Section tr-Section--white">
           <div className="tr-Section-inner">
