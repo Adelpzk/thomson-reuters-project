@@ -117,6 +117,7 @@ export default function Blogs({ blogs }) {
             var d = new Date(blog.date);
             return (
               <article
+                key={blog.postId}
                 id={blog.postId}
                 className="card post type-post status-publish format-standard has-post-thumbnail"
               >
@@ -158,6 +159,7 @@ export default function Blogs({ blogs }) {
                           )
                         }
                         key={blog.postId}
+                        passHref
                       >
                         <h3 className="card-post__title">
                           <a style={{ cursor: "Pointer" }}>{blog.title}</a>

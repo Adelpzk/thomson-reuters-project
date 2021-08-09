@@ -142,7 +142,9 @@ export default function Details({ blog }) {
                 <div className="article-hero__body">
                   <div className="article-hero__header">
                     {blog.categories.nodes.map((category) => (
-                      <p className="article-hero__tag">{category.name}</p>
+                      <p key={category.name} className="article-hero__tag">
+                        {category.name}
+                      </p>
                     ))}
                     <h1 className="article-hero__title">{blog.title}</h1>
                   </div>

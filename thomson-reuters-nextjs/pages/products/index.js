@@ -149,7 +149,10 @@ export default function Products({ products }) {
                           products.map((product) => {
                             var d = new Date(product.publication_date);
                             return (
-                              <div className="tr-ProductInfo-container">
+                              <div
+                                key={product.id}
+                                className="tr-ProductInfo-container"
+                              >
                                 <div className="tr-FlexGrid-containerFluid">
                                   <div className="tr-FlexGrid-row">
                                     <div className="tr-FlexGrid-col-md-12 tr-FlexGrid-col-lg-12">
