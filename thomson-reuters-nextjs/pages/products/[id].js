@@ -275,7 +275,7 @@ const Details = ({ product, blog }) => {
                                             -
                                           </button>
                                           <label
-                                            for="productQuantity"
+                                            htmlFor="productQuantity"
                                             className="tr-ProductQuantityInput-visuallyHidden"
                                           >
                                             Product quantity

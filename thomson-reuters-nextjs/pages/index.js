@@ -19,7 +19,7 @@ export default function Home() {
                 className="tr-Image-img"
                 alt=""
                 src="https://thomsonreuters.scene7.com/is/image/thomsonreutersPROD/tr1429547-01a-2880x1100.hero-m.jpg"
-                srcset="https://thomsonreuters.scene7.com/is/image/thomsonreutersPROD/tr1429547-01a-2880x1100.hero-m.jpg 1440w, https://thomsonreuters.scene7.com/is/image/thomsonreutersPROD/tr1429547-01a-2880x1100.hero-m-nrw.jpg 375w"
+                srcSet="https://thomsonreuters.scene7.com/is/image/thomsonreutersPROD/tr1429547-01a-2880x1100.hero-m.jpg 1440w, https://thomsonreuters.scene7.com/is/image/thomsonreutersPROD/tr1429547-01a-2880x1100.hero-m-nrw.jpg 375w"
                 loading="lazy"
               />
             </div>
@@ -80,7 +80,7 @@ export default function Home() {
                               className="nc-icon-wrapper"
                               fill="none"
                               stroke="currentColor"
-                              stroke-width="2"
+                              strokeWidth="2"
                             >
                               <path
                                 d="M2 12h20"
@@ -89,7 +89,7 @@ export default function Home() {
                               ></path>
                               <path
                                 d="M15 5l7 7-7 7"
-                                stroke-linecap="square"
+                                strokeLinecap="square"
                               ></path>
                             </g>
                           </svg>
@@ -121,7 +121,7 @@ export default function Home() {
                         className="tr-Image-img"
                         alt=""
                         src="https://www.thomsonreuters.com/en-us/posts/wp-content/uploads/sites/20/2020/10/business-development-800x450.jpg"
-                        srcset="https://www.thomsonreuters.com/en-us/posts/wp-content/uploads/sites/20/2020/10/business-development-800x450.jpg"
+                        srcSet="https://www.thomsonreuters.com/en-us/posts/wp-content/uploads/sites/20/2020/10/business-development-800x450.jpg"
                         loading="lazy"
                       />
                     </div>
@@ -182,7 +182,7 @@ export default function Home() {
                         className="tr-Image-img"
                         alt=""
                         src="https://www.thomsonreuters.com/en-us/posts/wp-content/uploads/sites/20/2019/07/blockchain-innovator-940x528-800x450-1-800x450.jpg"
-                        srcset="https://www.thomsonreuters.com/en-us/posts/wp-content/uploads/sites/20/2019/07/blockchain-innovator-940x528-800x450-1-800x450.jpg"
+                        srcSet="https://www.thomsonreuters.com/en-us/posts/wp-content/uploads/sites/20/2019/07/blockchain-innovator-940x528-800x450-1-800x450.jpg"
                         loading="lazy"
                       />
                     </div>

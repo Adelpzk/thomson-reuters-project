@@ -27,8 +27,8 @@ export default function PaginationContainer() {
                             d="M10 8l4 4-4 4"
                             fill="none"
                             stroke="currentColor"
-                            stroke-linecap="square"
-                            stroke-width="2"
+                            strokeLinecap="square"
+                            strokeWidth="2"
                           ></path>
                         </svg>
                       </span>
@@ -53,7 +53,6 @@ export default function PaginationContainer() {
             <li className="tr-PaginationPageItem">
               <a
                 className="tr-PaginationPageItem-innerWrapper is-clickable"
-                href="/en-ca/search?Site=ue_canada&amp;i=1&amp;page=2&amp;sp_c=20"
                 aria-current="false"
                 aria-label="Go to Page 2"
                 data-testid="pageItem"
@@ -65,7 +64,6 @@ export default function PaginationContainer() {
             <li className="tr-PaginationPageItem">
               <a
                 className="tr-PaginationPageItem-innerWrapper is-clickable"
-                href="/en-ca/search?Site=ue_canada&amp;i=1&amp;page=3&amp;sp_c=20"
                 aria-current="false"
                 aria-label="Go to Page 3"
                 data-testid="pageItem"
@@ -77,7 +75,6 @@ export default function PaginationContainer() {
             <li className="tr-PaginationPageItem">
               <a
                 className="tr-PaginationPageItem-innerWrapper is-clickable"
-                href="/en-ca/search?Site=ue_canada&amp;i=1&amp;page=4&amp;sp_c=20"
                 aria-current="false"
                 aria-label="Go to Page 4"
                 data-testid="pageItem"
@@ -88,7 +85,6 @@ export default function PaginationContainer() {
             <li className="tr-PaginationPageItem">
               <a
                 className="tr-PaginationPageItem-innerWrapper is-clickable"
-                href="/en-ca/search?Site=ue_canada&amp;i=1&amp;page=5&amp;sp_c=20"
                 aria-current="false"
                 aria-label="Go to Page 5"
                 data-testid="pageItem"
@@ -100,7 +96,6 @@ export default function PaginationContainer() {
             <li className="tr-PaginationPageItem">
               <a
                 className="tr-PaginationPageItem-innerWrapper is-clickable"
-                href="/en-ca/search?Site=ue_canada&amp;i=1&amp;page=6&amp;sp_c=20"
                 aria-current="false"
                 aria-label="Go to Page 6"
                 data-testid="pageItem"
@@ -111,7 +106,6 @@ export default function PaginationContainer() {
             <li className="tr-PaginationPageItem">
               <a
                 className="tr-PaginationPageItem-innerWrapper is-clickable"
-                href="/en-ca/search?Site=ue_canada&amp;i=1&amp;page=7&amp;sp_c=20"
                 aria-current="false"
                 aria-label="Go to Page 7"
                 data-testid="pageItem"
@@ -122,7 +116,6 @@ export default function PaginationContainer() {
             <li className="tr-PaginationPageItem">
               <a
                 className="tr-PaginationPageItem-innerWrapper is-clickable"
-                href="/en-ca/search?Site=ue_canada&amp;i=1&amp;page=8&amp;sp_c=20"
                 aria-current="false"
                 aria-label="Go to Page 8"
                 data-testid="pageItem"
@@ -134,7 +127,6 @@ export default function PaginationContainer() {
             <li className="tr-PaginationPageItem">
               <a
                 className="tr-PaginationPageItem-innerWrapper is-clickable"
-                href="/en-ca/search?Site=ue_canada&amp;i=1&amp;page=9&amp;sp_c=20"
                 aria-current="false"
                 aria-label="Go to Page 9"
                 data-testid="pageItem"
@@ -145,7 +137,6 @@ export default function PaginationContainer() {
             <li className="tr-PaginationPageItem">
               <a
                 className="tr-PaginationPageItem-innerWrapper is-clickable"
-                href="/en-ca/search?Site=ue_canada&amp;i=1&amp;page=10&amp;sp_c=20"
                 aria-current="false"
                 aria-label="Go to Page 10"
                 data-testid="pageItem"
@@ -156,7 +147,6 @@ export default function PaginationContainer() {
             <li className="tr-PaginationNavigation tr-PaginationNavigation--right ">
               <a
                 className="tr-PaginationNavigation-slider"
-                href="/en-ca/search?Site=ue_canada&amp;i=1&amp;page=2&amp;sp_c=20"
                 aria-label="Next"
                 data-testid="navItemRight"
               >
@@ -174,8 +164,8 @@ export default function PaginationContainer() {
                             d="M10 8l4 4-4 4"
                             fill="none"
                             stroke="currentColor"
-                            stroke-linecap="square"
-                            stroke-width="2"
+                            strokeLinecap="square"
+                            strokeWidth="2"
                           ></path>
                         </svg>
                       </span>
@@ -213,7 +203,7 @@ export default function PaginationContainer() {
                     aria-expanded="false"
                     className="tr-PopoverTrigger-container"
                     role="button"
-                    tabindex="0"
+                    tabIndex="0"
                   >
                     <div className="tr-PaginationFilter-dropdownOpenButton tr-PaginationFilter-dropdownOpenButton--closed">
                       20
@@ -229,8 +219,8 @@ export default function PaginationContainer() {
                                 d="M16 10l-4 4-4-4"
                                 fill="none"
                                 stroke="currentColor"
-                                stroke-linecap="square"
-                                stroke-width="2"
+                                strokeLinecap="square"
+                                strokeWidth="2"
                               ></path>
                             </svg>
                           </span>

@@ -67,7 +67,7 @@ export default function Blogs({ blogs }) {
                 className="tr-Image-img"
                 alt=""
                 src="https://www.thomsonreuters.com/content/dam/ewp-m/images/tax/en/photography/tr1132040-1-2880x710.jpg.transform/hero-s/q90/image.jpg"
-                srcset="https://www.thomsonreuters.com/content/dam/ewp-m/images/tax/en/photography/tr1132040-1-2880x710.jpg.transform/hero-s/q90/image.jpg 1440w, https://www.thomsonreuters.com/content/dam/ewp-m/images/tax/en/photography/tr1132040-1-2880x710.jpg.transform/hero-s/q90/image.jpg 250w"
+                srcSet="https://www.thomsonreuters.com/content/dam/ewp-m/images/tax/en/photography/tr1132040-1-2880x710.jpg.transform/hero-s/q90/image.jpg 1440w, https://www.thomsonreuters.com/content/dam/ewp-m/images/tax/en/photography/tr1132040-1-2880x710.jpg.transform/hero-s/q90/image.jpg 250w"
                 loading="lazy"
               />
             </div>
@@ -109,9 +109,9 @@ export default function Blogs({ blogs }) {
         <PopularTopics />
         <div
           className="card-list"
-          itemscope=""
-          itemprop="mainContentOfPage"
-          itemtype="http://schema.org/Blog"
+          itemScope=""
+          itemProp="mainContentOfPage"
+          itemType="http://schema.org/Blog"
         >
           {blogs.map((blog) => {
             var d = new Date(blog.date);

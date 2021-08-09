@@ -32,18 +32,18 @@ export default function Footer() {
                       data-typeahead-url='"//content.atomz.com/autocomplete/sp10/05/0d/51?"'
                       data-search-label='"Search"'
                       data-value='""'
-                      tabindex="-1"
+                      tabIndex="-1"
                     >
                       <label
                         className="tr-SearchInput-label u-hiddenVisually"
-                        for="searchInput-1"
+                        htmlFor="searchInput-1"
                       >
                         Search
                       </label>
                       <div className="tr-SearchInput-box">
                         <input
                           className="tr-SearchInput-input"
-                          autocomplete="off"
+                          autoComplete="off"
                           placeholder="Search"
                           id="searchInput-1"
                           type="search"
@@ -73,8 +73,8 @@ export default function Footer() {
                                       className="nc-icon-wrapper"
                                       fill="none"
                                       stroke="currentColor"
-                                      stroke-linecap="square"
-                                      stroke-width="2"
+                                      strokeLinecap="square"
+                                      strokeWidth="2"
                                     >
                                       <path d="M19 5L5 19M19 19L5 5"></path>
                                     </g>
@@ -100,8 +100,8 @@ export default function Footer() {
                                       className="nc-icon-wrapper"
                                       fill="none"
                                       stroke="currentColor"
-                                      stroke-linecap="square"
-                                      stroke-width="2"
+                                      strokeLinecap="square"
+                                      strokeWidth="2"
                                     >
                                       <path
                                         d="M22 22l-5.6-5.6"
@@ -116,7 +116,7 @@ export default function Footer() {
                           </button>
                         </div>
                       </div>
-                      <div className="tr-SearchInput-typeahead" tabindex="-1">
+                      <div className="tr-SearchInput-typeahead" tabIndex="-1">
                         <ul
                           className="tr-SearchInput-typeaheadItems"
                           id="searchInput-1-typeahead"
@@ -155,8 +155,8 @@ export default function Footer() {
                                   d="M16 10l-4 4-4-4"
                                   fill="none"
                                   stroke="currentColor"
-                                  stroke-linecap="square"
-                                  stroke-width="2"
+                                  strokeLinecap="square"
+                                  strokeWidth="2"
                                 ></path>
                               </svg>
                             </span>
@@ -212,8 +212,8 @@ export default function Footer() {
                                   d="M16 10l-4 4-4-4"
                                   fill="none"
                                   stroke="currentColor"
-                                  stroke-linecap="square"
-                                  stroke-width="2"
+                                  strokeLinecap="square"
+                                  strokeWidth="2"
                                 ></path>
                               </svg>
                             </span>
@@ -279,8 +279,8 @@ export default function Footer() {
                                   d="M16 10l-4 4-4-4"
                                   fill="none"
                                   stroke="currentColor"
-                                  stroke-linecap="square"
-                                  stroke-width="2"
+                                  strokeLinecap="square"
+                                  strokeWidth="2"
                                 ></path>
                               </svg>
                             </span>
@@ -356,8 +356,8 @@ export default function Footer() {
                                   d="M16 10l-4 4-4-4"
                                   fill="none"
                                   stroke="currentColor"
-                                  stroke-linecap="square"
-                                  stroke-width="2"
+                                  strokeLinecap="square"
+                                  strokeWidth="2"
                                 ></path>
                               </svg>
                             </span>
@@ -433,8 +433,8 @@ export default function Footer() {
                                   d="M16 10l-4 4-4-4"
                                   fill="none"
                                   stroke="currentColor"
-                                  stroke-linecap="square"
-                                  stroke-width="2"
+                                  strokeLinecap="square"
+                                  strokeWidth="2"
                                 ></path>
                               </svg>
                             </span>
@@ -510,8 +510,8 @@ export default function Footer() {
                                   d="M16 10l-4 4-4-4"
                                   fill="none"
                                   stroke="currentColor"
-                                  stroke-linecap="square"
-                                  stroke-width="2"
+                                  strokeLinecap="square"
+                                  strokeWidth="2"
                                 ></path>
                               </svg>
                             </span>
