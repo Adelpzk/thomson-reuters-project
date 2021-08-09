@@ -191,9 +191,11 @@ export default function Details({ blog }) {
             </article>
             <SideBar />
           </div>
-          <div class="more-answers-posts">
-            <div class="more-answers-posts__header">
-              <h3 class="more-answers-posts__header__title">More answers </h3>
+          <div className="more-answers-posts">
+            <div className="more-answers-posts__header">
+              <h3 className="more-answers-posts__header__title">
+                More answers{" "}
+              </h3>
             </div>
           </div>
         </div>

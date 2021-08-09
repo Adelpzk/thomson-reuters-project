@@ -118,10 +118,10 @@ export default function Blogs({ blogs }) {
             return (
               <article
                 id={blog.postId}
-                class="card post type-post status-publish format-standard has-post-thumbnail"
+                className="card post type-post status-publish format-standard has-post-thumbnail"
               >
                 <div className="list-blog card-post">
-                  <div class="card-post__thumbnail">
+                  <div className="card-post__thumbnail">
                     <a
                       href={
                         "/blogs/" +
@@ -135,7 +135,7 @@ export default function Blogs({ blogs }) {
                         width="370"
                         height="208"
                         src={blog.featuredImage.node.sourceUrl}
-                        class="img-responsive wp-post-image"
+                        className="img-responsive wp-post-image"
                         alt=""
                         loading="lazy"
                       />{" "}
@@ -148,8 +148,8 @@ export default function Blogs({ blogs }) {
                   >
                     <img src={blog.featuredImage.node.sourceUrl}></img>
                   </a> */}
-                  <div class="card-post__content">
-                    <header class="card-post__header">
+                  <div className="card-post__content">
+                    <header className="card-post__header">
                       <Link
                         href={
                           "/blogs/" +
@@ -175,8 +175,8 @@ export default function Blogs({ blogs }) {
                       <h3> {blog.title} </h3>
                     </a>
                   </Link> */}
-                  <div class="card-post__footer">
-                    <p class="card-post__meta">
+                  <div className="card-post__footer">
+                    <p className="card-post__meta">
                       {d.toLocaleDateString("en-US", options)}
                     </p>
                   </div>
@@ -185,8 +185,8 @@ export default function Blogs({ blogs }) {
             );
           })}
         </div>
-        <button class="load-more">
-          More <span class="load-more-arrow"></span>
+        <button className="load-more">
+          More <span className="load-more-arrow"></span>
         </button>
       </div>
     </>
