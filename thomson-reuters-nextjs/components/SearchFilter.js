@@ -24,7 +24,7 @@ export default function SearchFilter() {
 
       <div
         data-react-from-markup-container=""
-        class="tr-FiltersSection-borders"
+        className="tr-FiltersSection-borders"
       >
         <div className="tr-FiltersSection">
           <button className="tr-FiltersSection-heading" aria-expanded="false">
@@ -40,7 +40,7 @@ export default function SearchFilter() {
 
       <div
         data-react-from-markup-container=""
-        class="tr-FiltersSection-borders"
+        className="tr-FiltersSection-borders"
       >
         <div className="tr-FiltersSection">
           <button className="tr-FiltersSection-heading" aria-expanded="false">
@@ -56,7 +56,7 @@ export default function SearchFilter() {
 
       <div
         data-react-from-markup-container=""
-        class="tr-FiltersSection-borders"
+        className="tr-FiltersSection-borders"
       >
         <div className="tr-FiltersSection">
           <button className="tr-FiltersSection-heading" aria-expanded="false">
@@ -139,7 +139,7 @@ export default function SearchFilter() {
                     </svg>
                   </button>
                   <button
-                    class="QSI__EmbeddedFeedbackContainer_SVGButton"
+                    className="QSI__EmbeddedFeedbackContainer_SVGButton"
                     title="Thumbs Down"
                     style={{
                       font: "inherit",

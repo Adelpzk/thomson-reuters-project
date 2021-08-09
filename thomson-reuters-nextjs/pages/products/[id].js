@@ -160,7 +160,7 @@ const Details = ({ product, blog }) => {
                           <div
                             className="tr-Image tr-Image--cover tr-Image--anchorC"
                             style={{
-                              "background-size": "cover",
+                              backgroundSize: "cover",
                               height: "100%",
                             }}
                           >

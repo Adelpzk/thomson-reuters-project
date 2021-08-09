@@ -176,7 +176,7 @@ export default function Details({ blog }) {
                 <div className="article-tags">
                   <ul className="blog-tags tag-list">
                     {blog.tags.nodes.map((tag) => (
-                      <li>
+                      <li key={tag.name.toLowerCase().replace(/\s+/g, "-")}>
                         <a>{tag.name}</a>
                       </li>
                     ))}
