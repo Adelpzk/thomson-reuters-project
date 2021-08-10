@@ -209,7 +209,7 @@ const Details = ({ product, blog }) => {
                             {product.ibsn != null ? (
                               <div className="tr-FlexGrid-col-xs-12 tr-FlexGrid-col-sm-12 tr-FlexGrid-col-md-12 tr-FlexGrid-col-lg-12">
                                 <div className="tr-ProductDetailSummary-itemDisplay">
-                                  IBSN:
+                                  ISBN:
                                   <strong> {product.ibsn}</strong>
                                 </div>
                               </div>
