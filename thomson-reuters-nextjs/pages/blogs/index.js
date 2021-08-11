@@ -151,20 +151,20 @@ export default function Blogs({ blogs }) {
                   </a> */}
                   <div className="card-post__content">
                     <header className="card-post__header">
-                      <Link
-                        href={
-                          "/blogs/" +
-                          encodeURIComponent(
-                            blog.title.toLowerCase().replace(/\s+/g, "-")
-                          ).replace(/%/g, "~")
-                        }
-                        key={blog.postId}
-                        passHref
-                      >
-                        <h3 className="card-post__title">
+                      <h3 className="card-post__title">
+                        <Link
+                          href={
+                            "/blogs/" +
+                            encodeURIComponent(
+                              blog.title.toLowerCase().replace(/\s+/g, "-")
+                            ).replace(/%/g, "~")
+                          }
+                          key={blog.postId}
+                          passHref
+                        >
                           <a style={{ cursor: "Pointer" }}>{blog.title}</a>
-                        </h3>
-                      </Link>
+                        </Link>
+                      </h3>
                     </header>
                   </div>
                   {/* <Link

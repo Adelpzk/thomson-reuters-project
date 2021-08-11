@@ -139,7 +139,7 @@ export default function Home() {
                             Stay up-to-date with the latest developments from
                             the Thomson Reuters Community
                           </p>
-                          <Link href="/blogs">
+                          <Link href="/blogs" passHref>
                             <a className="link-button tr-Anchor tr-Button tr-Button--primary ">
                               <span className="tr-Button-body">Blogs</span>
                             </a>
@@ -201,7 +201,7 @@ export default function Home() {
                             business professionals rely on to deliver their best
                             work.
                           </p>
-                          <Link href="/products">
+                          <Link href="/products" passHref>
                             <a className="link-button tr-Anchor tr-Button tr-Button--primary ">
                               <span className="tr-Button-body">Products</span>
                             </a>
