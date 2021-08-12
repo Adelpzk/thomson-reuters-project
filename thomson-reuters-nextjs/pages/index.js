@@ -16,21 +16,21 @@ export default function Home() {
               }}
             >
               <img
-                class="tr-Image-img"
+                className="tr-Image-img"
                 alt=""
                 src="https://thomsonreuters.scene7.com/is/image/thomsonreutersPROD/tr1429547-01a-2880x1100.hero-m.jpg"
-                srcset="https://thomsonreuters.scene7.com/is/image/thomsonreutersPROD/tr1429547-01a-2880x1100.hero-m.jpg 1440w, https://thomsonreuters.scene7.com/is/image/thomsonreutersPROD/tr1429547-01a-2880x1100.hero-m-nrw.jpg 375w"
+                srcSet="https://thomsonreuters.scene7.com/is/image/thomsonreutersPROD/tr1429547-01a-2880x1100.hero-m.jpg 1440w, https://thomsonreuters.scene7.com/is/image/thomsonreutersPROD/tr1429547-01a-2880x1100.hero-m-nrw.jpg 375w"
                 loading="lazy"
               />
             </div>
           </div>
           <div className="tr-Poster-content">
-            <div class="tr-Poster-contentInner">
-              <div class="tr-Grid tr-Grid--712512 tr-Grid--gutterlessAtNarrow">
-                <div class="tr-Grid-items">
-                  <div class="tr-Grid-item">
-                    <div class="tr-VerticalSpacing tr-VerticalSpacing--m">
-                      <h1 class="tr-Heading tr-Heading--xl">
+            <div className="tr-Poster-contentInner">
+              <div className="tr-Grid tr-Grid--712512 tr-Grid--gutterlessAtNarrow">
+                <div className="tr-Grid-items">
+                  <div className="tr-Grid-item">
+                    <div className="tr-VerticalSpacing tr-VerticalSpacing--m">
+                      <h1 className="tr-Heading tr-Heading--xl">
                         <b>Thomson Reuters GraphQL POC NextJS App</b>
                       </h1>
                     </div>
@@ -80,7 +80,7 @@ export default function Home() {
                               className="nc-icon-wrapper"
                               fill="none"
                               stroke="currentColor"
-                              stroke-width="2"
+                              strokeWidth="2"
                             >
                               <path
                                 d="M2 12h20"
@@ -89,7 +89,7 @@ export default function Home() {
                               ></path>
                               <path
                                 d="M15 5l7 7-7 7"
-                                stroke-linecap="square"
+                                strokeLinecap="square"
                               ></path>
                             </g>
                           </svg>
@@ -121,7 +121,7 @@ export default function Home() {
                         className="tr-Image-img"
                         alt=""
                         src="https://www.thomsonreuters.com/en-us/posts/wp-content/uploads/sites/20/2020/10/business-development-800x450.jpg"
-                        srcset="https://www.thomsonreuters.com/en-us/posts/wp-content/uploads/sites/20/2020/10/business-development-800x450.jpg"
+                        srcSet="https://www.thomsonreuters.com/en-us/posts/wp-content/uploads/sites/20/2020/10/business-development-800x450.jpg"
                         loading="lazy"
                       />
                     </div>
@@ -134,20 +134,20 @@ export default function Home() {
                             <strong>Thomson Reuters Blogs</strong>
                           </h3>
                         </div>
-                        <div class="tr-TextCardBase-description">
+                        <div className="tr-TextCardBase-description">
                           <p>
                             Stay up-to-date with the latest developments from
                             the Thomson Reuters Community
-                          </p>   
-                          <Link href="/blogs">
-                            <a class="link-button tr-Anchor tr-Button tr-Button--primary ">
-                              <span class="tr-Button-body">Blogs</span>
+                          </p>
+                          <Link href="/blogs" passHref>
+                            <a className="link-button tr-Anchor tr-Button tr-Button--primary ">
+                              <span className="tr-Button-body">Blogs</span>
                             </a>
                             {/* <button style={{ cursor: "pointer" }}>Blogs</button> */}
                           </Link>
                         </div>
                       </div>
-                      <div class="tr-TextCardBase-footer"></div>
+                      <div className="tr-TextCardBase-footer"></div>
                     </div>
                   </div>
                 </div>
@@ -182,7 +182,7 @@ export default function Home() {
                         className="tr-Image-img"
                         alt=""
                         src="https://www.thomsonreuters.com/en-us/posts/wp-content/uploads/sites/20/2019/07/blockchain-innovator-940x528-800x450-1-800x450.jpg"
-                        srcset="https://www.thomsonreuters.com/en-us/posts/wp-content/uploads/sites/20/2019/07/blockchain-innovator-940x528-800x450-1-800x450.jpg"
+                        srcSet="https://www.thomsonreuters.com/en-us/posts/wp-content/uploads/sites/20/2019/07/blockchain-innovator-940x528-800x450-1-800x450.jpg"
                         loading="lazy"
                       />
                     </div>
@@ -195,21 +195,21 @@ export default function Home() {
                             <strong>Thomson Reuters Products</strong>
                           </h3>
                         </div>
-                        <div class="tr-TextCardBase-description">
+                        <div className="tr-TextCardBase-description">
                           <p>
                             Learn more about the products that legal, tax, and
                             business professionals rely on to deliver their best
                             work.
                           </p>
-                          <Link href="/products">
-                            <a class="link-button tr-Anchor tr-Button tr-Button--primary ">
-                              <span class="tr-Button-body">Products</span>
+                          <Link href="/products" passHref>
+                            <a className="link-button tr-Anchor tr-Button tr-Button--primary ">
+                              <span className="tr-Button-body">Products</span>
                             </a>
                             {/* <button style={{ cursor: "pointer" }}>Products</button> */}
                           </Link>
                         </div>
                       </div>
-                      <div class="tr-TextCardBase-footer"></div>
+                      <div className="tr-TextCardBase-footer"></div>
                     </div>
                   </div>
                 </div>

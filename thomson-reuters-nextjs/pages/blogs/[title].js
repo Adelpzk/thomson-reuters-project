@@ -40,10 +40,14 @@ export const getStaticPaths = async () => {
     //console.log(typeof blog.postId);
     return {
       params: {
-        title: blog.title.toLowerCase().replace(/\s+/g, "-").toString(),
+        title: encodeURIComponent(
+          blog.title.toLowerCase().replace(/\s+/g, "-").toString()
+        ).replace(/%/g, "~"),
       },
     };
   });
+
+  //console.log(paths);
 
   return {
     paths,
@@ -64,7 +68,9 @@ export const getStaticProps = async (context) => {
   //GraphQL query to fetch the necessary info to displays list of blogs
   const GQL_QUERY = `
   query{
-    posts(where: {title:"${context.params.title.replace(/-+/g, " ")}"}){
+    posts(where: {title:"${decodeURIComponent(
+      context.params.title.replace(/-+/g, " ").replace(/~/g, "%")
+    )}"}){
       nodes {
         postId
         title
@@ -142,7 +148,9 @@ export default function Details({ blog }) {
                 <div className="article-hero__body">
                   <div className="article-hero__header">
                     {blog.categories.nodes.map((category) => (
-                      <p className="article-hero__tag">{category.name}</p>
+                      <p key={category.name} className="article-hero__tag">
+                        {category.name}
+                      </p>
                     ))}
                     <h1 className="article-hero__title">{blog.title}</h1>
                   </div>
@@ -176,7 +184,7 @@ export default function Details({ blog }) {
                 <div className="article-tags">
                   <ul className="blog-tags tag-list">
                     {blog.tags.nodes.map((tag) => (
-                      <li>
+                      <li key={tag.name.toLowerCase().replace(/\s+/g, "-")}>
                         <a>{tag.name}</a>
                       </li>
                     ))}
@@ -191,9 +199,11 @@ export default function Details({ blog }) {
             </article>
             <SideBar />
           </div>
-          <div class="more-answers-posts">
-            <div class="more-answers-posts__header">
-              <h3 class="more-answers-posts__header__title">More answers </h3>
+          <div className="more-answers-posts">
+            <div className="more-answers-posts__header">
+              <h3 className="more-answers-posts__header__title">
+                More answers{" "}
+              </h3>
             </div>
           </div>
         </div>

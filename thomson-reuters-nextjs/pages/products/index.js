@@ -66,10 +66,10 @@ export default function Products({ products }) {
                   }}
                 >
                   <img
-                    class="tr-Image-img"
+                    className="tr-Image-img"
                     alt=""
                     src="https://www.thomsonreuters.com/content/dam/ewp-m/images/image-library/en/photography/21760721744-6a4e1b628d-o.jpg.transform/hero-s/q90/image.jpg"
-                    srcset="https://www.thomsonreuters.com/content/dam/ewp-m/images/image-library/en/photography/21760721744-6a4e1b628d-o.jpg.transform/hero-s/q90/image.jpg 1440w, https://www.thomsonreuters.com/content/dam/ewp-m/images/image-library/en/photography/21760721744-6a4e1b628d-o.jpg.transform/hero-s/q90/image.jpg 375w"
+                    srcSet="https://www.thomsonreuters.com/content/dam/ewp-m/images/image-library/en/photography/21760721744-6a4e1b628d-o.jpg.transform/hero-s/q90/image.jpg 1440w, https://www.thomsonreuters.com/content/dam/ewp-m/images/image-library/en/photography/21760721744-6a4e1b628d-o.jpg.transform/hero-s/q90/image.jpg 375w"
                     loading="lazy"
                   />
                 </div>
@@ -125,7 +125,7 @@ export default function Products({ products }) {
                     <SearchFilter />
                   </div>
                   <div className="tr-Grid-item">
-                    <div class="tr-CleanFiltersSection">
+                    <div className="tr-CleanFiltersSection">
                       <div data-react-from-markup-container="">
                         <div
                           data-rehydratable="tr-CleanFilters"
@@ -149,7 +149,10 @@ export default function Products({ products }) {
                           products.map((product) => {
                             var d = new Date(product.publication_date);
                             return (
-                              <div className="tr-ProductInfo-container">
+                              <div
+                                key={product.id}
+                                className="tr-ProductInfo-container"
+                              >
                                 <div className="tr-FlexGrid-containerFluid">
                                   <div className="tr-FlexGrid-row">
                                     <div className="tr-FlexGrid-col-md-12 tr-FlexGrid-col-lg-12">

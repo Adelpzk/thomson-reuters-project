@@ -67,7 +67,7 @@ export default function Blogs({ blogs }) {
                 className="tr-Image-img"
                 alt=""
                 src="https://www.thomsonreuters.com/content/dam/ewp-m/images/tax/en/photography/tr1132040-1-2880x710.jpg.transform/hero-s/q90/image.jpg"
-                srcset="https://www.thomsonreuters.com/content/dam/ewp-m/images/tax/en/photography/tr1132040-1-2880x710.jpg.transform/hero-s/q90/image.jpg 1440w, https://www.thomsonreuters.com/content/dam/ewp-m/images/tax/en/photography/tr1132040-1-2880x710.jpg.transform/hero-s/q90/image.jpg 250w"
+                srcSet="https://www.thomsonreuters.com/content/dam/ewp-m/images/tax/en/photography/tr1132040-1-2880x710.jpg.transform/hero-s/q90/image.jpg 1440w, https://www.thomsonreuters.com/content/dam/ewp-m/images/tax/en/photography/tr1132040-1-2880x710.jpg.transform/hero-s/q90/image.jpg 250w"
                 loading="lazy"
               />
             </div>
@@ -109,25 +109,26 @@ export default function Blogs({ blogs }) {
         <PopularTopics />
         <div
           className="card-list"
-          itemscope=""
-          itemprop="mainContentOfPage"
-          itemtype="http://schema.org/Blog"
+          itemScope=""
+          itemProp="mainContentOfPage"
+          itemType="http://schema.org/Blog"
         >
           {blogs.map((blog) => {
             var d = new Date(blog.date);
             return (
               <article
+                key={blog.postId}
                 id={blog.postId}
-                class="card post type-post status-publish format-standard has-post-thumbnail"
+                className="card post type-post status-publish format-standard has-post-thumbnail"
               >
                 <div className="list-blog card-post">
-                  <div class="card-post__thumbnail">
+                  <div className="card-post__thumbnail">
                     <a
                       href={
                         "/blogs/" +
                         encodeURIComponent(
                           blog.title.toLowerCase().replace(/\s+/g, "-")
-                        )
+                        ).replace(/%/g, "~")
                       }
                       title=""
                     >
@@ -135,7 +136,7 @@ export default function Blogs({ blogs }) {
                         width="370"
                         height="208"
                         src={blog.featuredImage.node.sourceUrl}
-                        class="img-responsive wp-post-image"
+                        className="img-responsive wp-post-image"
                         alt=""
                         loading="lazy"
                       />{" "}
@@ -148,21 +149,22 @@ export default function Blogs({ blogs }) {
                   >
                     <img src={blog.featuredImage.node.sourceUrl}></img>
                   </a> */}
-                  <div class="card-post__content">
-                    <header class="card-post__header">
-                      <Link
-                        href={
-                          "/blogs/" +
-                          encodeURIComponent(
-                            blog.title.toLowerCase().replace(/\s+/g, "-")
-                          )
-                        }
-                        key={blog.postId}
-                      >
-                        <h3 className="card-post__title">
+                  <div className="card-post__content">
+                    <header className="card-post__header">
+                      <h3 className="card-post__title">
+                        <Link
+                          href={
+                            "/blogs/" +
+                            encodeURIComponent(
+                              blog.title.toLowerCase().replace(/\s+/g, "-")
+                            ).replace(/%/g, "~")
+                          }
+                          key={blog.postId}
+                          passHref
+                        >
                           <a style={{ cursor: "Pointer" }}>{blog.title}</a>
-                        </h3>
-                      </Link>
+                        </Link>
+                      </h3>
                     </header>
                   </div>
                   {/* <Link
@@ -175,8 +177,8 @@ export default function Blogs({ blogs }) {
                       <h3> {blog.title} </h3>
                     </a>
                   </Link> */}
-                  <div class="card-post__footer">
-                    <p class="card-post__meta">
+                  <div className="card-post__footer">
+                    <p className="card-post__meta">
                       {d.toLocaleDateString("en-US", options)}
                     </p>
                   </div>
@@ -185,8 +187,8 @@ export default function Blogs({ blogs }) {
             );
           })}
         </div>
-        <button class="load-more">
-          More <span class="load-more-arrow"></span>
+        <button className="load-more">
+          More <span className="load-more-arrow"></span>
         </button>
       </div>
     </>

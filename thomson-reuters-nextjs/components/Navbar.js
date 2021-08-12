@@ -25,12 +25,12 @@ export default function Navbar() {
               </Link>
             </li> */}
             <li className="tr-SiteHeaderMenu">
-              <Link href="/blogs">
+              <Link href="/blogs" passHref>
                 <a className="tr-SiteHeaderMenu-link">Blogs</a>
               </Link>
             </li>
             <li className="tr-SiteHeaderMenu">
-              <Link href="/products">
+              <Link href="/products" passHref>
                 <a className="tr-SiteHeaderMenu-link">Products</a>
               </Link>
             </li>
