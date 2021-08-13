@@ -1,0 +1,58 @@
+[{
+  "_id": {
+    "$oid": "60edfeb136d9372b4065cb2a"
+  },
+  "title": "Energy Law and Policy",
+  "author": [
+    "Bob Heggie",
+    "Gordon Kaiser"
+  ],
+  "publisher": "Carswell",
+  "practice_area": "Environmental",
+  "jurisdiction": "General",
+  "publication_date": "2011-04-03T04:00:00.000+00:00",
+  "ibsn": "9780779822683",
+  "price": 109,
+  "image": "https://products.thomsonreuters.ca/BookCovers/30834671.gif",
+  "text": "<div><p><em>Energy Law and Policy</em> offers a timely, cross-border, and multi-disciplinary approach to a broad range of topics in the law and economics of energy policy in Canada and in the United States. The issues covered include the regulatory challenges of conservation and renewable energy, deregulation of markets, time of use pricing, incentive regulation, carbon pricing, as well as more traditional subjects such as cost of capital and rate design. The chapters on public utility law, administrative law, and Aboriginal duty to consult are an important addition to the literature.</p> <p>Written by leading energy lawyers and economists, this text provides a comprehensive discussion of the many recent changes in energy policy in Canada and the United States. This publication is an invaluable reference source for practitioners appearing before regulatory tribunals as well economists and policymakers.</p></div>",
+  "id": 3,
+  "description": "Written by leading energy lawyers and economists, this text offers a timely, cross-border, and multi-disciplinary approach to a broad range of topics in the law and economics of energy..."
+},{
+  "_id": {
+    "$oid": "60edfeb136d9372b4065cb28"
+  },
+  "title": "ImmQuest",
+  "author": [
+    "Mario Bellissimo"
+  ],
+  "publisher": "Carswell",
+  "practice_area": "Immigration",
+  "jurisdiction": "General",
+  "publication_date": "2019-10-11T04:00:00.000+00:00",
+  "ibsn": null,
+  "price": 394,
+  "image": "https://store.thomsonreuters.ca/content/dam/ue/en-ca/products/tr-horizontal-logo-canada.png",
+  "text": "<div><p><em>ImmQuest</em> will provide up-to-date information in a rapidly changing field of law for the immigration practitioner, and consultants and government agencies. Experienced lawyers provide succinct summaries of the most relevant issues in ground-breaking cases, as well as practical advice on the daily concerns faced by immigration practitioners.</p> <p>Available in both print and electronic formats, all cases are cross-referenced directly to the <em>Immigration Law Reporter</em>. The electronic version also links directly to the full-text cases and legislation on WestlawNext® Canada.</p><p><strong>Regular features include:</strong></p><ul><li>Case of the month</li><li>Editor's choice of the most significant case law, cross-referenced to the <em>Immigration Law Reporter</em> </li><li>Timely and investigative articles on key citizenship, immigration and protected person issues, legislative changes, and case law by leading practitioners and members of the judiciary </li><li>Key statistical info on emerging trends </li><li>In-depth interviews with industry leaders and game changers in immigration law</li> </ul></div>",
+  "id": 1,
+  "description": "Written for the immigration practitioner, consultants, and government agencies, this work provides summaries of the most relevant issues in groundbreaking cases, and practical advice..."
+},{
+  "_id": {
+    "$oid": "60edfeb136d9372b4065cb29"
+  },
+  "title": "Police Powers Newsletter",
+  "author": [
+    "Madam Justice Michelle Fuerst",
+    "Scott K. Fenton",
+    "Susan Magotiaux"
+  ],
+  "publisher": "Carswell",
+  "practice_area": "Criminal law & procedure",
+  "jurisdiction": "General",
+  "publication_date": "2019-10-11T04:00:00.000+00:00",
+  "ibsn": null,
+  "price": 232,
+  "image": "https://products.thomsonreuters.ca/BookCovers/30833512.gif",
+  "text": "<div><p>The <em>Police Powers Newsletter</em> provides a comprehensive look at all aspects of policing, not just for law enforcement, but also for lawyers and judges. </p><p>Written by Justice Michelle Fuerst, Justice Susan Magotiaux, and defence counsel Scott Fenton, this newsletter provides a comprehensive look at all aspects of policing, including powers of detention, arrest, and search and seizure in light of the <em>Charter of Rights and Freedoms</em>. It also includes insightful articles and case commentaries from three different perspectives to keep readers up to date on the latest changes in this rapidly evolving area of the law, not just for law enforcement, but also for lawyers and judges. </p><p>In addition to print, <em>Police Powers Newsletter</em> is available in an electronic PDF format. For your convenience, this electronic PDF version can be sent directly to your email upon request. An added bonus for WestlawNext® Canada subscribers features active links from the electronic PDF, which permit immediate access to the full-text of the cases referenced. If you wish to receive an electronic PDF version of <em>Police Powers Newsletter</em> with your subscription, please be sure to indicate your preference and provide your email address when you place your order. </p><p><em>Police Powers Newsletter</em> is also available on <em>CriminalSource™</em>.</p></div>",
+  "id": 2,
+  "description": "This criminal law newsletter provides a comprehensive look at all aspects of policing, including powers of detention, arrest and search and seizure in light of the Charter of Rights..."
+}]
