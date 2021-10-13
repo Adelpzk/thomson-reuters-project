@@ -64,3 +64,6 @@ To run the NextJS application (inside the `thomson-reuters-nextjs` folder), you 
 <br />Application was made for Thomson Reuters during a 2 month internship through the UWaterloo WE Accelerate Program
 
 ---
+## Picture
+![TR](https://user-images.githubusercontent.com/85805543/137048956-6174a853-df41-4985-a45f-aa3ff18b5fdd.png)
+
