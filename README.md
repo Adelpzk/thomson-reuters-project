@@ -8,6 +8,7 @@
   - [Executing](#executing)
   - [Other Information](#other-information)
 - [Authors](#authors)
+- [Picture](#picture)
 
 ---
 
